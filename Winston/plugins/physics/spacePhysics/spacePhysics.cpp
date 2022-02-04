@@ -1,13 +1,4 @@
-/*
- * File:
- * Date:
- * Description:
- * Author:
- * Modifications:
- */
-
-#include <ode/ode.h>
-#include <plugins/physics.h>
+#include "SpacePhysics.hpp"
 
 static pthread_mutex_t mutex; // needed to run with multi-threaded version of ODE
  
@@ -16,9 +7,6 @@ static dBodyID planetBody;
 
 static dGeomID shipGeom;
 static dBodyID shipBody;
-
-const static double MU_EARTH = 3.9860442e14;
-const static double SHIP_MASS = 420000; //ISS Mass
 
 void webots_physics_init() {
   pthread_mutex_init(&mutex, NULL);
@@ -38,10 +26,6 @@ void webots_physics_init() {
   // pthread_mutex_lock(&mutex);
   //Stuff here
   // pthread_mutex_unlock(&mutex);
-}
-
-double norm(const dReal* pos) {
-  return sqrt(pos[0] * pos[0] + pos[1] * pos[1] + pos[2] * pos[2]);
 }
 
 void webots_physics_step() {

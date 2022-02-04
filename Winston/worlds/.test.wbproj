@@ -7,6 +7,6 @@ centralWidgetVisible: 1
 projectionMode: PERSPECTIVE
 renderingMode: PLAIN
 orthographicViewHeight: 7.40025
-textFiles: 0 "plugins/physics/spacePhysics/spacePhysics.cpp"
+textFiles: 0 "plugins/physics/SpacePhysics/SpacePhysics.cpp"
 globalOptionalRendering: CoordinateSystem
 consoles: Console:All:All

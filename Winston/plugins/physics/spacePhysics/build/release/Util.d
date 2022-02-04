@@ -1,4 +1,4 @@
-build/release/SpacePhysics.o: SpacePhysics.cpp SpacePhysics.hpp \
+build/release/Util.o: Util.cpp Util.hpp \
  C:\Users\riths\AppData\Local\Programs\Webots/include/ode/ode/ode.h \
  C:\Users\riths\AppData\Local\Programs\Webots/include/ode/ode/odeconfig.h \
  C:\Users\riths\AppData\Local\Programs\Webots/include/ode/ode/precision.h \
@@ -23,5 +23,4 @@ build/release/SpacePhysics.o: SpacePhysics.cpp SpacePhysics.hpp \
  C:\Users\riths\AppData\Local\Programs\Webots/include/ode/ode/version.h \
  C:\Users\riths\AppData\Local\Programs\Webots/include/ode/ode/odecpp.h \
  C:\Users\riths\AppData\Local\Programs\Webots/include/ode/ode/odecpp_collision.h \
- C:\Users\riths\AppData\Local\Programs\Webots/include/plugins/physics.h \
- Util.hpp
+ C:\Users\riths\AppData\Local\Programs\Webots/include/plugins/physics.h

@@ -65,6 +65,8 @@
 ###
 ###-----------------------------------------------------------------------------
 
+CXX_SOURCES = SpacePhysics.cpp Util.cpp
+
 ### Do not modify: this includes Webots global Makefile.include
 null :=
 space := $(null) $(null)
