@@ -20,9 +20,11 @@ class PhysicsObject {
 		dGeomID getGeom();
 		dBodyID getBody();
 		double getMass();
+		const double* getPosition();
 
 		void printInfo();
 
 		void setMass(double mass);
+		void setForce(double x, double y, double z);
 		void setLinearVel(double x, double y, double z);
 };
