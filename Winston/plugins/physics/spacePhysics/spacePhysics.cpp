@@ -30,7 +30,7 @@ void webots_physics_step() {
   // const double *pPos = planet->getPosition();
   // dWebotsConsolePrintf("Planet: %f, %f, %f\n", pPos[0], pPos[1], pPos[2]);
 
-  double magnitude = norm(sPos);
+  double magnitude = norm(sPos) * 1000; //meters
   dWebotsConsolePrintf("Magnitude: %f\n", magnitude);
 
   double fr2 = (MU_EARTH / (magnitude * magnitude * magnitude));

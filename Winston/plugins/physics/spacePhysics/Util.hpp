@@ -20,6 +20,7 @@ class PhysicsObject {
 		dGeomID getGeom();
 		dBodyID getBody();
 		double getMass();
+		double getVelocity(); //TODO
 		const double* getPosition();
 
 		void printInfo();
