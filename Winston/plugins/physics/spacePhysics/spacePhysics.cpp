@@ -1,7 +1,7 @@
 #include "SpacePhysics.hpp"
 
 //only if manipulating joints
-static pthread_mutex_t mutex; // needed to run with multi-threaded version of ODE
+static pthread_mutex_t mutex;
 
 static PhysicsObject *planet;
 static PhysicsObject *ship;

@@ -5,10 +5,33 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.2756847493307626 -0.6401305283453537 -0.7170988953183047 2.3045980613572445
-  position 9359.906278420412 3296.617015288632 -6731.319250433799
+  orientation 0.19815185895592502 0.6228027600526559 0.7568702417608354 4.056322942192126
+  position 7669.147198533147 623.5667730339345 -1502.090879743151
   follow "Earth"
   followType "None"
+}
+DEF Satellite Robot {
+  translation 6800 0 0
+  rotation 0 1 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 100 100 100
+      }
+    }
+  ]
+  name "Spaceship"
+  boundingObject Box {
+    size 100 100 100
+  }
+  physics Physics {
+    density -1
+    mass 420000
+  }
 }
 TexturedBackground {
 }
@@ -38,26 +61,8 @@ DEF Planet Solid {
     mass 3e+30
   }
 }
-DEF Satellite Solid {
-  translation 6800 0 0
-  rotation 0 1 0 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-        roughness 1
-        metalness 0
-      }
-      geometry Box {
-        size 100 100 100
-      }
-    }
-  ]
-  name "Spaceship"
-  boundingObject Box {
-    size 100 100 100
-  }
-  physics Physics {
-    density -1
-    mass 420000
-  }
+Robot {
+  name "Supervisor"
+  controller "SpacePhysicsSupervisor"
+  supervisor TRUE
 }
