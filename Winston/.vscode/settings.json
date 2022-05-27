@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"string": "cpp"
+	},
+	"makefile.makefilePath": "plugins\\physics\\SpacePhysics\\Makefile",
+	"makefile.makeDirectory": "C:\\Users\\riths\\git\\spaceSim\\Winston\\plugins\\physics\\SpacePhysics"
+}

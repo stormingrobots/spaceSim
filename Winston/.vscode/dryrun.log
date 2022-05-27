@@ -1,0 +1,32 @@
+make.exe all -f c:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics\Makefile -C C:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics'
+ 
+The system cannot find the path specified.
+
+"# updating" Communication.d
+ 
+"# updating" Util.d
+ 
+"# updating" SpacePhysics.d
+ 
+The system cannot find the path specified.
+
+echo "# compiling" SpacePhysics.cpp
+g++ -c -Wall -O3 -DNDEBUG -mwindows -Wl,-subsystem,windows -D_GLIBCXX_USE_CXX11_ABI=1   -I. -I"C:\Program Files\Webots/include/ode" -I"C:\Program Files\Webots/include" SpacePhysics.cpp -o build/release/SpacePhysics.o
+echo "# compiling" Util.cpp
+g++ -c -Wall -O3 -DNDEBUG -mwindows -Wl,-subsystem,windows -D_GLIBCXX_USE_CXX11_ABI=1   -I. -I"C:\Program Files\Webots/include/ode" -I"C:\Program Files\Webots/include" Util.cpp -o build/release/Util.o
+echo "# compiling" Communication.cpp
+g++ -c -Wall -O3 -DNDEBUG -mwindows -Wl,-subsystem,windows -D_GLIBCXX_USE_CXX11_ABI=1   -I. -I"C:\Program Files\Webots/include/ode" -I"C:\Program Files\Webots/include" Communication.cpp -o build/release/Communication.o
+echo "# linking" build/release/SpacePhysics.o build/release/Util.o build/release/Communication.o SpacePhysics.dll
+g++ -s -shared -o build/release/SpacePhysics.dll build/release/SpacePhysics.o build/release/Util.o build/release/Communication.o -L"C:/Program Files/Webots/msys64/mingw64/bin" -lode "C:\Program Files\Webots/resources/projects/plugins/physics/physics.o" 
+# In Webots context (WEBOTS_DISABLE_BINARY_COPY set), copy only if the target
+# does not exist yet, thus there cannot be error due to replacement.
+# Otherwise, Webots does the copy systematically before running the simulation.
+# Outside Webots context, always copy the target.
+if [ -z "" ] || [ ! -e "SpacePhysics.dll" ]; then \
+	echo "# copying" SpacePhysics.dll; \
+	rm -f SpacePhysics.dll > /dev/null 2>&1 ; \
+	cp build/release/SpacePhysics.dll SpacePhysics.dll > /dev/null 2>&1 ; \
+fi || :
+make: Leaving directory 'C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics'
+ 

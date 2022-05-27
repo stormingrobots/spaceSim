@@ -5,8 +5,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.19815185895592502 0.6228027600526559 0.7568702417608354 4.056322942192126
-  position 7669.147198533147 623.5667730339345 -1502.090879743151
+  orientation 0.3119515532986065 0.6461272946469475 0.6965671162973481 3.948400517644136
+  position 7094.929509184824 114.31676558346331 -413.9226771093729
   follow "Earth"
   followType "None"
 }
@@ -14,6 +14,10 @@ DEF Satellite Robot {
   translation 6800 0 0
   rotation 0 1 0 0
   children [
+    Receiver {
+    }
+    Emitter {
+    }
     Shape {
       appearance PBRAppearance {
         roughness 1
@@ -32,6 +36,7 @@ DEF Satellite Robot {
     density -1
     mass 420000
   }
+  controller "SpaceshipController"
 }
 TexturedBackground {
 }

@@ -1,0 +1,778 @@
+make.exe all -f c:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics\Makefile -C C:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics --print-data-base --no-builtin-variables --no-builtin-rules --question
+# make: Entering directory 'C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics'
+ 
+The system cannot find the path specified.
+
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Fri May 27 16:51:37 2022
+
+# Variables
+
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+SYSTEMDRIVE = C:
+# environment
+LC_ALL = C
+# environment
+VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.os.include', line 89)
+EXE_EXTENSION = .exe
+# environment
+USERPROFILE = C:\Users\riths
+# environment
+LOCALAPPDATA = C:\Users\riths\AppData\Local
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 390)
+DYNAMIC_LIBRARIES = -L"$(WEBOTS_LIB_PATH)" -lode "$(WEBOTS_HOME)/resources/projects/plugins/physics/physics.o"
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-5a84a02e-0192-42b0-9c3d-2ade5211e3e7-sock
+# environment
+VSCODE_CWD = C:\Users\riths\AppData\Local\Programs\Microsoft VS Code
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 23
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 244)
+BUILD_GOAL_DIR = $(BUILD_DIR)/$(GOAL)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 179)
+USE_CXX = true
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2276_QXFYQUZIUYAJOLTG
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+WEBOTS_HOME = C:\Program Files\Webots
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 230)
+GOAL_TMP = true
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 433)
+MAIN_TARGET_WINDOWS_LIB = $(MAIN_TARGET:.dll=.lib)
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\riths\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LANG = C
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 139)
+BAD_NAME = $(basename $(notdir $(CURDIR)))
+# default
+.LOADED := 
+# environment
+TMP = C:\Users\riths\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.os.include', line 91)
+WEBOTS_LIB_PATH = $(subst \,/,$(WEBOTS_HOME))/msys64/mingw64/bin
+# makefile
+MAKEFLAGS = pqrRw
+# environment
+ONEDRIVE = C:\Users\riths\OneDrive
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 219)
+SUPPORTED_TARGETS = all release debug profile
+# makefile
+CURDIR := C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 440)
+MAIN_TARGET_WINDOWS32_LIB = $(MAIN_TARGET:.dll=.lib)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 542)
+EMCC_FILE = $(BUILD_GOAL_DIR_EMCC)/$(notdir $@)
+# environment
+VSCODE_PIPE_LOGGING = true
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 441)
+MAIN_TARGET_WINDOWS64_LIB = $(MAIN_TARGET:.dll=.lib)
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 257)
+WRENJS_DIR = $(WEBOTS_HOME_PATH)/resources/web/wwi
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+MFLAGS = -pqrRw
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 192)
+EXCLUDE_CONTROLLERS = true
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile (from 'build/release/Communication.d', line 1)
+MAKEFILE_LIST := c:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics\Makefile C:/Program Files/Webots/resources/Makefile.include C:/Program Files/Webots/resources/Makefile.os.include build/release/SpacePhysics.d build/release/Util.d build/release/Communication.d
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 2276
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+*F = $(notdir $*)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 234)
+GOAL = release
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 341)
+DYNAMIC_LINK_FLAGS = -s -shared
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 397)
+INCLUDE = -I. -I"$(WEBOTS_HOME)/include/ode" -I"$(WEBOTS_HOME)/include"
+# default
+MAKE_HOST := Windows32
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := sh.exe
+# environment
+HOMEPATH = \Users\riths
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.os.include', line 87)
+STATIC_LIB_EXTENSION = .a
+# environment
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\riths\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\riths\AppData\Local\Programs\Python\Python39\;C:\Program Files\AdoptOpenJDK\jdk-16.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\riths\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\riths\anaconda3;C:\Users\riths\anaconda3\Library\mingw-w64\bin;C:\Users\riths\anaconda3\Library\usr\bin;C:\Users\riths\anaconda3\Library\bin;C:\Users\riths\anaconda3\Scripts;C:\Users\riths\AppData\Local\Microsoft\WindowsApps;C:\Users\riths\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\platform-tools\;C:\Program Files (x86)\mitmproxy\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin;;C:\Users\riths\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\riths\mongosh\bin;C:\ffmpeg\bin;C:\Users\riths\AppData\Roaming\nvm;C:\Program Files\nodejs;
+# environment
+COMPUTERNAME = LAPTOP-V0O5GJAG
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 521)
+DEPENDENCIES = $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(C_SOURCES:.c=.d) $(CXX_SOURCES:.cpp=.d)))
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 245)
+BUILD_GOAL_DIR_EMCC = $(BUILD_DIR)/$(GOAL_EMCC)
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132711384934295716
+# makefile (from 'c:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics\Makefile', line 73)
+WEBOTS_HOME_PATH = $(subst $(space),\ ,$(strip $(subst \,/,$(WEBOTS_HOME))))
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.os.include', line 18)
+OSTYPE = windows
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 294)
+WBCFLAGS = -Wall -O3 -DNDEBUG -mwindows -Wl,-subsystem,windows -D_GLIBCXX_USE_CXX11_ABI=1
+# environment
+LOGONSERVER = \\LAPTOP-V0O5GJAG
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 191)
+USE_ODE = true
+# environment
+USERNAME = riths
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.os.include', line 92)
+WEBOTS_CONTROLLER_LIB_PATH = $(subst \,/,$(WEBOTS_HOME))/lib/controller
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 142)
+NAME = $(word $(words $(BAD_NAME)),$(BAD_NAME))
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.os.include', line 90)
+SHARED_LIB_EXTENSION = .dll
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 445)
+FILES_TO_REMOVE = $(MAIN_TARGET_COPY) $(MAIN_TARGET_WINDOWS32_LIB) $(MAIN_TARGET_WINDOWS64_LIB)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 187)
+OBJECTS = $(addprefix $(BUILD_GOAL_DIR)/,$(patsubst %.c,%.o, $(patsubst %.cc,%.o, $(patsubst %.c++,%.o, $(patsubst %.cpp,%.o, $(notdir $(C_SOURCES) $(CXX_SOURCES)))))))
+# environment
+USERDOMAIN = LAPTOP-V0O5GJAG
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 85)
+space := $(subst ,, )
+# environment
+NVM_HOME = C:\Users\riths\AppData\Roaming\nvm
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 1
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 212)
+MAIN_TARGET = $(LIB_PREFIX)$(NAME)$(SHARED_LIB_EXTENSION)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 188)
+OBJECTS_EMCC = $(addprefix $(BUILD_GOAL_DIR_EMCC)/,$(patsubst %.c,%.o, $(patsubst %.cc,%.o, $(patsubst %.c++,%.o, $(patsubst %.cpp,%.o, $(notdir $(C_SOURCES) $(CXX_SOURCES)))))))
+# environment
+USERDOMAIN_ROAMINGPROFILE = LAPTOP-V0O5GJAG
+# environment
+NUMBER_OF_PROCESSORS = 4
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 216)
+TARGETS = $(MAIN_TARGET) $(EXTRA_TARGETS)
+# environment
+PUBLIC = C:\Users\Public
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 84)
+null := 
+# environment
+APPDATA = C:\Users\riths\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 145)
+SPLIT_PATH = $(subst /, ,$(dir $(CURDIR)))
+# environment
+NVM_SYMLINK = C:\Program Files\nodejs
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+PYCHARM COMMUNITY EDITION = C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin;
+# makefile (from 'C:/Program Files/Webots/reso 
+urces/Makefile.include', line 200)
+BUILD_SHARED_LIBRARY = true
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 458)
+LIBRARIES = $(DYNAMIC_LIBRARIES)
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 439)
+MAIN_TARGET_COPY = $(MAIN_TARGET)
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 243)
+BUILD_DIR = build
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 161)
+CXX_SOURCES = SpacePhysics.cpp Util.cpp Communication.cpp $(CC_SOURCES) $(CPP_SOURCES)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\riths\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.67.2-main-sock
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 146)
+BUILD_TYPE = $(word $(words $(SPLIT_PATH)),$(SPLIT_PATH))
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 72)
+PROTECTED_WEBOTS_HOME := C:\Program Files\Webots
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 186)
+SOURCES_DIRECTORIES = $(sort $(dir $(C_SOURCES) $(CXX_SOURCES)))
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 310)
+LINKER = $(CXX)
+# environment
+SESSIONNAME = Console
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 151)
+SILENT = @
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = 1801
+# makefile (from 'C:/Program Files/Webots/resources/Makefile.include', line 459)
+LFLAGS = $(DYNAMIC_LINK_FLAGS) -o
+# environment
+PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+# variable set hash-table stats:
+# Load=148/1024=14%, Rehash=0, Collisions=39/439=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# build (key C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics/build, mtime 1653684041): No files, no impossibilities so far.
+# . (key C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics, mtime 1653684651): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+build/release/%.d: %.c
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 504):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CC) $(INCLUDE) $(WBCFLAGS) $(CFLAGS) -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.c=.o))) > $@
+
+build/release/%.d: %.cc
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 508):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CXX) $(INCLUDE) $(WBCFLAGS) $(CFLAGS -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.cc=.o))) > $@
+
+build/release/%.d: %.c++
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 512):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CXX) $(INCLUDE) $(WBCFLAGS) $(CFLAGS) -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.c++=.o))) > $@
+
+build/release/%.d: %.cpp
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 516):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CXX) $(INCLUDE) $(WBCFLAGS) $(CFLAGS) -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.cpp=.o))) > $@
+
+build/release/%.o: %.c
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 531):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CC) -c $(WBCFLAGS) $(CFLAGS) $(INCLUDE) $< -o $@
+
+build/release/%.o: %.cc
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 535):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CXX) -c $(WBCFLAGS) $(CFLAGS) $(CXXFLAGS) $(INCLUDE) $< -o $@
+
+build/release/%.o: %.c++
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 539):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CXX) -c $(WBCFLAGS) $(CFLAGS) $(CXXFLAGS) $(INCLUDE) $< -o $@
+
+build/release/%.o: %.cpp
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 544):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CXX) -c $(WBCFLAGS) $(CFLAGS) $(CXXFLAGS) $(INCLUDE) $< -o $@
+
+# 8 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/precision.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/objects.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/timer.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/collision_space.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/version.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/odeinit.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/mass.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+profile: SpacePhysics.dll
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/error.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/compatibility.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/odecpp_collision.h:
+#  Implicit rule search has bee 
+n done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+debug: SpacePhysics.dll
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/odeconfig.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+c:\Users\riths\git\spaceSim\Winston\plugins\physics\SpacePhysics\Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-26 08:17:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Communication.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-27 15:30:03
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/memory.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/odemath_legacy.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 553):
+	$(SILENT)rm -fr $(FILES_TO_REMOVE) $(BUILD_DIR) > /dev/null 2>&1 || :
+	$(SILENT)rm -d $(EMPTY_DIRECTORIES_TO_REMOVE) > /dev/null 2>&1 || :
+	$(SILENT)rm $(WRENJS_DIR)/wrenjs.js $(WRENJS_DIR)/wrenjs.data $(WRENJS_DIR)/wrenjs.wasm > /dev/null 2>&1 || :
+	$(SILENT)rm -r $(WRENJS_DIR)/images/post_processing > /dev/null 2>&1 || :
+
+# Not a target:
+C:\Program Files\Webots/include/plugins/physics.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Util.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-24 14:15:18
+#  File has been updated.
+#  Successfully updated.
+
+build/release/Communication.d: Communication.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Communication'
+#  Last modified 2022-05-27 16:51:32
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 516):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CXX) $(INCLUDE) $(WBCFLAGS) $(CFLAGS) -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.cpp=.o))) > $@
+
+build/release/SpacePhysics.dll: build/release/SpacePhysics.o build/release/Util.o build/release/Communication.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-27 16:50:48
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 492):
+	@echo "# linking" $(OBJECTS) $(notdir $@)
+	$(SILENT)$(LINKER) $(LFLAGS) $@ $(OBJECTS) $(LIBRARIES) $(AR_SUPPRESS_OUTPUT)
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/contact.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/ode.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/export-dif.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/matrix.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: SpacePhysics.dll
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/odecpp.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/rotation.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+SpacePhysics.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-24 14:13:49
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/collision.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+build/release/SpacePhysics.d: SpacePhysics.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'SpacePhysics'
+#  Last modified 2022-05-27 16:51:34
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 516):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CXX) $(INCLUDE) $(WBCFLAGS) $(CFLAGS) -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.cpp=.o))) > $@
+
+# Not a target:
+Communication.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-27 16:50:43
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+SpacePhysics.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-27 16:49:27
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/common.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/misc.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+build/release/Util.o: Util.cpp Util.cpp Util.hpp C:\Program Files\Webots/include/ode/ode/ode.h C:\Program Files\Webots/include/ode/ode/odeconfig.h C:\Program Files\Webots/include/ode/ode/precision.h C:\Program Files\Webots/include/ode/ode/compatibility.h C:\Program Files\Webots/include/ode/ode/common.h C:\Program Files\Webots/include/ode/ode/error.h C:\Program Files\Webots/include/ode/ode/odeinit.h C:\Program Files\Webots/include/ode/ode/contact.h C:\Program Files\Webots/include/ode/ode/memory.h C:\Program Files\Webots/include/ode/ode/odemath.h C:\Program Files\Webots/include/ode/ode/odemath_legacy.h C:\Program Files\Webots/include/ode/ode/matrix.h C:\Program Files\Webots/include/ode/ode/timer.h C:\Program Files\Webots/include/ode/ode/rotation.h C:\Program Files\Webots/include/ode/ode/mass.h C:\Program Files\Webots/include/ode/ode/misc.h C:\Program Files\Webots/include/ode/ode/objects.h C:\Program Files\Webots/include/ode/ode/collision_space.h C:\Program Files\Webots/include/ode/ode/collision.h C:\Program Files\Webots/include/ode/ode/collision_trimesh.h C:\Program Files\Webots/include/ode/ode/export-dif.h C:\Program Files\Webots/include/ode/ode/version.h C:\Program Files\Webots/include/ode/ode/odecpp.h C:\Program Files\Webots/include/ode/ode/odecpp_collision.h C:\Program Files\Webots/include/plugins/physics.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Util'
+#  Last modified 2022-05-27 16:40:46
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/ 
+resources/Makefile.include', line 544):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CXX) -c $(WBCFLAGS) $(CFLAGS) $(CXXFLAGS) $(INCLUDE) $< -o $@
+
+# Not a target:
+C:/Program Files/Webots/resources/Makefile.os.include:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:40
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/odemath.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:26
+#  File has been updated.
+#  Successfully updated.
+
+build/release/SpacePhysics.o: SpacePhysics.cpp SpacePhysics.cpp SpacePhysics.hpp C:\Program Files\Webots/include/ode/ode/ode.h C:\Program Files\Webots/include/ode/ode/odeconfig.h C:\Program Files\Webots/include/ode/ode/precision.h C:\Program Files\Webots/include/ode/ode/compatibility.h C:\Program Files\Webots/include/ode/ode/common.h C:\Program Files\Webots/include/ode/ode/error.h C:\Program Files\Webots/include/ode/ode/odeinit.h C:\Program Files\Webots/include/ode/ode/contact.h C:\Program Files\Webots/include/ode/ode/memory.h C:\Program Files\Webots/include/ode/ode/odemath.h C:\Program Files\Webots/include/ode/ode/odemath_legacy.h C:\Program Files\Webots/include/ode/ode/matrix.h C:\Program Files\Webots/include/ode/ode/timer.h C:\Program Files\Webots/include/ode/ode/rotation.h C:\Program Files\Webots/include/ode/ode/mass.h C:\Program Files\Webots/include/ode/ode/misc.h C:\Program Files\Webots/include/ode/ode/objects.h C:\Program Files\Webots/include/ode/ode/collision_space.h C:\Program Files\Webots/include/ode/ode/collision.h C:\Program Files\Webots/include/ode/ode/collision_trimesh.h C:\Program Files\Webots/include/ode/ode/export-dif.h C:\Program Files\Webots/include/ode/ode/version.h C:\Program Files\Webots/include/ode/ode/odecpp.h C:\Program Files\Webots/include/ode/ode/odecpp_collision.h C:\Program Files\Webots/include/plugins/physics.h Util.hpp Communication.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'SpacePhysics'
+#  Last modified 2022-05-27 16:50:48
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 544):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CXX) -c $(WBCFLAGS) $(CFLAGS) $(CXXFLAGS) $(INCLUDE) $< -o $@
+
+# Not a target:
+C:\Program Files\Webots/include/ode/ode/collision_trimesh.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:24
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Util.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 08:56:31
+#  File has been updated.
+#  Successfully updated.
+
+jar:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+SpacePhysics.dll: build/release/SpacePhysics.dll
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-27 16:50:48
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 463):
+	@# In Webots context (WEBOTS_DISABLE_BINARY_COPY set), copy only if the target
+	@# does not exist yet, thus there cannot be error due to replacement.
+	@# Otherwise, Webots does the copy systematically before running the simulation.
+	@# Outside Webots context, always copy the target.
+	@if [ -z "${WEBOTS_DISABLE_BINARY_COPY}" ] || [ ! -e "$(MAIN_TARGET)" ]; then \
+		echo "# copying" $(notdir $(MAIN_TARGET)); \
+		rm -f $(MAIN_TARGET) > /dev/null 2>&1 ; \
+		cp $(BUILD_GOAL_DIR)/$(MAIN_TARGET) $(MAIN_TARGET_COPY) > /dev/null 2>&1 ; \
+	fi || :
+
+release: SpacePhysics.dll
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+build/release/Util.d: Util.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Util'
+#  Last modified 2022-05-27 16:51:33
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 516):
+	@echo "# updating" $(notdir $@)
+	$(SILENT)$(CXX) $(INCLUDE) $(WBCFLAGS) $(CFLAGS) -MM $< -MT $(addprefix $(BUILD_GOAL_DIR)/,$(notdir $(<:.cpp=.o))) > $@
+
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: clean all release debug profile jar
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/release/Communication.o: Communication.cpp Communication.cpp Communication.hpp C:\Program Files\Webots/include/plugins/physics.h C:\Program Files\Webots/include/ode/ode/ode.h C:\Program Files\Webots/include/ode/ode/odeconfig.h C:\Program Files\Webots/include/ode/ode/precision.h C:\Program Files\Webots/include/ode/ode/compatibility.h C:\Program Files\Webots/include/ode/ode/common.h C:\Program Files\Webots/include/ode/ode/error.h C:\Program Files\Webots/include/ode/ode/odeinit.h C:\Program Files\Webots/include/ode/ode/contact.h C:\Program Files\Webots/include/ode/ode/memory.h C:\Program Files\Webots/include/ode/ode/odemath.h C:\Program Files\Webots/include/ode/ode/odemath_legacy.h C:\Program Files\Webots/include/ode/ode/matrix.h C:\Program Files\Webots/include/ode/ode/timer.h C:\Program Files\Webots/include/ode/ode/rotation.h C:\Program Files\Webots/include/ode/ode/mass.h C:\Program Files\Webots/include/ode/ode/misc.h C:\Program Files\Webots/include/ode/ode/objects.h C:\Program Files\Webots/include/ode/ode/collision_space.h C:\Program Files\Webots/include/ode/ode/collision.h C:\Program Files\We 
+bots/include/ode/ode/collision_trimesh.h C:\Program Files\Webots/include/ode/ode/export-dif.h C:\Program Files\Webots/include/ode/ode/version.h C:\Program Files\Webots/include/ode/ode/odecpp.h C:\Program Files\Webots/include/ode/ode/odecpp_collision.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Communication'
+#  Last modified 2022-05-27 16:50:48
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:/Program Files/Webots/resources/Makefile.include', line 544):
+	@echo "# compiling" $(notdir $<)
+	$(SILENT)$(CXX) -c $(WBCFLAGS) $(CFLAGS) $(CXXFLAGS) $(INCLUDE) $< -o $@
+
+# Not a target:
+C:/Program Files/Webots/resources/Makefile.include:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 23:07:40
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=51/1024=5%, Rehash=0, Collisions=2/205=1%
+# VPATH Search Paths
+
+vpath %.d build
+
+# 1 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 76 / storage = 2137 B / avg = 28 B
+# current buf: size = 8174 B / used = 2137 B / count = 76 / avg = 28 B
+
+# strcache performance: lookups = 205 / hit rate = 62%
+# hash-table stats:
+# Load=76/8192=1%, Rehash=0, Collisions=0/205=0%
+# Finished Make data base on Fri May 27 16:51:37 2022
+
+# make: Leaving directory 'C:/Users/riths/git/spaceSim/Winston/plugins/physics/SpacePhysics'
+ 

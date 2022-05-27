@@ -7,9 +7,9 @@ double norm(const double* pos) {
     pos[2] * pos[2]);
 }
 
-PhysicsObject::PhysicsObject(const char* name) {
+PhysicsObject::PhysicsObject(std::string name) {
   this->name = name;
-  geom = dWebotsGetGeomFromDEF(name);
+  geom = dWebotsGetGeomFromDEF(name.c_str());
   body = dGeomGetBody(geom);
 
   dBodySetGravityMode(body, 0);
@@ -34,7 +34,7 @@ const double* PhysicsObject::getPosition() {
 }
 
 void PhysicsObject::printInfo() {
-  dWebotsConsolePrintf("%s: %p %p\n", name, geom, body);
+  dWebotsConsolePrintf("%s: %p %p\n", name.c_str(), geom, body);
 }
 
 void PhysicsObject::setMass(double val) {

@@ -8,24 +8,24 @@
 double norm(const double* pos);
 
 class PhysicsObject {
-	private:
-		const char* name;
+  protected:
+    std::string name;
 
-		dGeomID geom;
-		dBodyID body;
-	
-	public:
-		PhysicsObject(const char* name);
-	
-		dGeomID getGeom();
-		dBodyID getBody();
-		double getMass();
-		double getVelocity(); //TODO
-		const double* getPosition();
+    dGeomID geom;
+    dBodyID body;
 
-		void printInfo();
+  public:
+    PhysicsObject(const std::string name);
 
-		void setMass(double mass);
-		void setForce(double x, double y, double z);
-		void setLinearVel(double x, double y, double z);
+    dGeomID getGeom();
+    dBodyID getBody();
+    double getMass();
+    double getVelocity(); //TODO
+    const double* getPosition();
+
+    void printInfo();
+
+    void setMass(double mass);
+    void setForce(double x, double y, double z);
+    void setLinearVel(double x, double y, double z);
 };
