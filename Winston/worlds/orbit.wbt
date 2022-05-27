@@ -54,6 +54,7 @@ DEF Planet Solid {
       }
       geometry Sphere {
         radius 6378
+        subdivision 3
       }
     }
   ]

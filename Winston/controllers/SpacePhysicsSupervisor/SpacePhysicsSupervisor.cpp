@@ -3,7 +3,7 @@
 
 #include <string>
 
-#define MAX_COORDS 2000
+#define MAX_COORDS 20000
 
 using namespace webots;
 

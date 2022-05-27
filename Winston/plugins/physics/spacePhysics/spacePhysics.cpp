@@ -44,7 +44,7 @@ void webots_physics_step() {
   double magnitude = norm(sPos) * 1000; // meters
   // dWebotsConsolePrintf("Magnitude: %f\n", magnitude);
 
-  double fr2 = (MU_EARTH / (magnitude * magnitude * magnitude));
+  double fr2 = (ship->getMass() * MU_EARTH / (magnitude * magnitude * magnitude));
 
   f[0] = -fr2 * sPos[0];
   f[1] = -fr2 * sPos[1];
