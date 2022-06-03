@@ -1,18 +1,23 @@
-#include "Communication.hpp"
+#include "SatelliteCommunication.hpp"
 
-Communicator::Communicator() {
-  // stuff
+Communicator::Communicator(webots::Emitter *emitter,
+                           webots::Receiver *receiver) {
+  this->emitter = emitter;
+  this->receiver = receiver;
+
+  receiver->setChannel(1);
+  emitter->setChannel(0);
 }
 
-void Communicator::send(int channel, std::string message) {
+void Communicator::send(std::string message) {
   std::string content = message;
   content.push_back(MESSAGE_DELIMITER);
-  dWebotsSend(channel, content.c_str(), content.length());
+  emitter->send(content.c_str(), content.length());
 }
 
 void Communicator::receive() {
-  int size = 0;
-  const char *data = (const char *)dWebotsReceive(&size);
+  int size = receiver->getDataSize();
+  const char *data = (const char *)receiver->getData();
   buffer.append(data, size);
 
   std::size_t lastPos = 0;

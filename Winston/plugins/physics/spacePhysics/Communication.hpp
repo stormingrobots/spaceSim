@@ -1,3 +1,5 @@
+#pragma once
+
 #include <plugins/physics.h>
 
 #include <queue>

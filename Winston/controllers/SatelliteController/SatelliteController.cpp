@@ -7,7 +7,8 @@
 
 #include <iostream>
 #include <string>
-#include <cstring>
+
+#include "SatelliteCommunication.hpp"
 
 using namespace webots;
 
@@ -17,21 +18,19 @@ int main(int argc, char **argv) {
   Emitter *emitter = robot->getEmitter("emitter");
   Receiver *receiver = robot->getReceiver("receiver");
 
-  receiver->setChannel(1);
+  Communicator *communicator = new Communicator(emitter, receiver);
 
-  std::string message = "Hello World.";
-  emitter->setChannel(0);
   int timeStep = (int)robot->getBasicTimeStep();
 
   std::cout << "Starting spaceship with timestep: " << timeStep << std::endl;
   // std::cout << "Message: " << message.c_str() << std::endl;
-  // std::cout << "Message Length: " << std::strlen(message.c_str()) << std::endl;
-  
+  // std::cout << "Message Length: " << std::strlen(message.c_str()) <<
+  // std::endl;
+
   while (robot->step(timeStep) != -1) {
     // std::cout << "Thruster Velocity: " << thruster->getVelocity() <<
     // std::endl;
-    
-    emitter->send(message.c_str(), message.length());
+    communicator->send("Hello World");
   }
 
   // Enter here exit cleanup code.

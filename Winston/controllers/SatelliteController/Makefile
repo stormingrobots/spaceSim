@@ -65,6 +65,8 @@
 ###
 ###-----------------------------------------------------------------------------
 
+CXX_SOURCES = SatelliteController.cpp SatelliteCommunication.cpp
+
 ### Do not modify: this includes Webots global Makefile.include
 null :=
 space := $(null) $(null)
