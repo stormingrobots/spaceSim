@@ -3,15 +3,16 @@
 #include <ode/ode.h>
 #include <plugins/physics.h>
 
+#include "Satellite.hpp"
 #include "Util.hpp"
 
-//Physics Constants
+// Physics Constants
 const static double MU_EARTH = 3.9860442e14;
 
-//Bodies Config
+// Bodies Config
 const static double PLANET_MASS = 3e30;
 
-const static double SHIP_MASS = 420000; //ISS Mass
+const static double SHIP_MASS = 420000; // ISS Mass
 const static double SHIP_VEL = 7.7;
 
 void webots_physics_init();

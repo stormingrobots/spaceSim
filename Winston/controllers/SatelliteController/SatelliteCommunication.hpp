@@ -7,7 +7,7 @@
 #include <queue>
 #include <string>
 
-#define MESSAGE_DELIMITER '.'
+#define MESSAGE_DELIMITER '!'
 
 class Communicator {
 private:

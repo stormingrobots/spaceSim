@@ -1,21 +1,16 @@
 #include "SpacePhysics.hpp"
-#include "Communication.hpp"
 
 // only if manipulating joints
 static pthread_mutex_t mutex;
 
 static PhysicsObject *planet;
-static PhysicsObject *ship;
-
-static Communicator *communicator;
+static Satellite *ship;
 
 void webots_physics_init() {
   pthread_mutex_init(&mutex, NULL);
 
-  communicator = new Communicator();
-
   planet = new PhysicsObject("Planet");
-  ship = new PhysicsObject("Satellite");
+  ship = new Satellite("Satellite");
 
   planet->printInfo();
   ship->printInfo();
@@ -27,13 +22,9 @@ void webots_physics_init() {
 }
 
 void webots_physics_step() {
-  communicator->receive();
-  std::string msg = "";
-  while (!(msg = communicator->next()).empty()) {
-    dWebotsConsolePrintf("Received Message: %s\n", msg.c_str());
-  }
-  
-  double f[3];
+  ship->setForce(0, 0, 0);
+  ship->tick();
+
   const double *sPos = ship->getPosition();
   // dWebotsConsolePrintf("Ship: %f, %f, %f\n", sPos[0], sPos[1], sPos[2]);
 
@@ -44,14 +35,16 @@ void webots_physics_step() {
   double magnitude = norm(sPos) * 1000; // meters
   // dWebotsConsolePrintf("Magnitude: %f\n", magnitude);
 
-  double fr2 = (ship->getMass() * MU_EARTH / (magnitude * magnitude * magnitude));
+  double fr2 =
+      (ship->getMass() * MU_EARTH / (magnitude * magnitude * magnitude));
 
+  double f[3];
   f[0] = -fr2 * sPos[0];
   f[1] = -fr2 * sPos[1];
   f[2] = -fr2 * sPos[2];
 
   // dWebotsConsolePrintf("Force: %f, %f, %f\n", f[0], f[1], f[2]);
-  ship->setForce(f[0], f[1], f[2]);
+  ship->addForce(f[0], f[1], f[2]);
 }
 
 void webots_physics_step_end() {}

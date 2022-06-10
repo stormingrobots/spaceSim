@@ -1,4 +1,4 @@
-build/release/SpacePhysics.o: SpacePhysics.cpp SpacePhysics.hpp \
+build/release/Satellite.o: Satellite.cpp Satellite.hpp Util.hpp \
  C:\Program\ Files\Webots/include/ode/ode/ode.h \
  C:\Program\ Files\Webots/include/ode/ode/odeconfig.h \
  C:\Program\ Files\Webots/include/ode/ode/precision.h \
@@ -23,5 +23,4 @@ build/release/SpacePhysics.o: SpacePhysics.cpp SpacePhysics.hpp \
  C:\Program\ Files\Webots/include/ode/ode/version.h \
  C:\Program\ Files\Webots/include/ode/ode/odecpp.h \
  C:\Program\ Files\Webots/include/ode/ode/odecpp_collision.h \
- C:\Program\ Files\Webots/include/plugins/physics.h Satellite.hpp \
- Util.hpp
+ C:\Program\ Files\Webots/include/plugins/physics.h

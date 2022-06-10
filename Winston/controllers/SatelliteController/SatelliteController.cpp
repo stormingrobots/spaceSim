@@ -27,10 +27,13 @@ int main(int argc, char **argv) {
   // std::cout << "Message Length: " << std::strlen(message.c_str()) <<
   // std::endl;
 
+  double counter = 0;
   while (robot->step(timeStep) != -1) {
     // std::cout << "Thruster Velocity: " << thruster->getVelocity() <<
     // std::endl;
-    communicator->send("Hello World");
+
+    counter = 1;
+    communicator->send(std::to_string(counter));
   }
 
   // Enter here exit cleanup code.
