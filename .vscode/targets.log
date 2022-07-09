@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 27 11:03:43 2022
+# Make data base, printed on Fri Jul 08 20:59:59 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ USERPROFILE = C:\Users\riths
 # environment
 LOCALAPPDATA = C:\Users\riths\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-b6700686-306d-4f33-a274-2f3914c4a917-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-502da326-13b1-467c-8a74-0bea7e47b598-sock
 # environment
 VSCODE_CWD = C:\Users\riths\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -41,7 +41,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_788_HZCPGRUHTDJUYUTZ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10776_BZNUWUWNWXCDNDFC
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -50,6 +50,8 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 .VARIABLES := 
 # automatic
 %D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+WEBOTS_HOME = C:\Program Files\Webots
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # environment
@@ -57,7 +59,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\riths\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = C:\Users\riths\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LANG = C
 # default
@@ -97,7 +99,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 788
+VSCODE_PID = 10776
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -127,7 +129,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\riths\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\riths\AppData\Local\Programs\Python\Python39\;C:\Program Files\AdoptOpenJDK\jdk-16.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\riths\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\riths\anaconda3;C:\Users\riths\anaconda3\Library\mingw-w64\bin;C:\Users\riths\anaconda3\Library\usr\bin;C:\Users\riths\anaconda3\Library\bin;C:\Users\riths\anaconda3\Scripts;C:\Users\riths\AppData\Local\Microsoft\WindowsApps;C:\Users\riths\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\platform-tools\;C:\Program Files (x86)\mitmproxy\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin;;C:\Users\riths\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\riths\mongosh\bin;C:\ffmpeg\bin;C:\Users\riths\AppData\Roaming\nvm;C:\Program Files\nodejs;
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\riths\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\riths\AppData\Local\Programs\Python\Python39\;C:\Program Files\AdoptOpenJDK\jdk-16.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\riths\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\riths\.cargo\bin;C:\Users\riths\anaconda3;C:\Users\riths\anaconda3\Library\mingw-w64\bin;C:\Users\riths\anaconda3\Library\usr\bin;C:\Users\riths\anaconda3\Library\bin;C:\Users\riths\anaconda3\Scripts;C:\Users\riths\AppData\Local\Microsoft\WindowsApps;C:\Users\riths\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\platform-tools\;C:\Program Files (x86)\mitmproxy\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin;;C:\Users\riths\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\riths\mongosh\bin;C:\ffmpeg\bin;C:\Users\riths\AppData\Roaming\nvm;C:\Program Files\nodejs;
 # environment
 COMPUTERNAME = LAPTOP-V0O5GJAG
 # default
@@ -195,7 +197,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\riths\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.67.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.68.1-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -204,7 +206,8 @@ VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.67.2-main-sock
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
-# environment
+# en 
+vironment
 SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
@@ -213,7 +216,7 @@ PROCESSOR_REVISION = 1801
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
 # variable set hash-table stats:
-# Load=100/1024=10%, Rehash=0, Collisions=10/124=8%
+# Load=101/1024=10%, Rehash=0, Collisions=10/125=8%
 
 # Pattern-specific Variable Values
 
@@ -278,8 +281,7 @@ GNUmakefile:
 
 # No 'vpath' search paths.
 
-# No general ('VPATH' variable)  
-search path.
+# No general ('VPATH' variable) search path.
 
 # strcache buffers: 1 (0) / strings = 13 / storage = 102 B / avg = 7 B
 # current buf: size = 8174 B / used = 102 B / count = 13 / avg = 7 B
@@ -287,6 +289,6 @@ search path.
 # strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
-# Finished Make data base on Fri May 27 11:03:43 2022
+# Finished Make data base on Fri Jul 08 20:59:59 2022
 
  

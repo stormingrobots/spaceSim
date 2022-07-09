@@ -1,5 +1,5 @@
-build/release/Satellite.o: Satellite.cpp Satellite.hpp Util.hpp \
- C:\Program\ Files\Webots/include/ode/ode/ode.h \
+build/release/Satellite.o: Satellite.cpp Satellite.hpp Packet.hpp \
+ Util.hpp C:\Program\ Files\Webots/include/ode/ode/ode.h \
  C:\Program\ Files\Webots/include/ode/ode/odeconfig.h \
  C:\Program\ Files\Webots/include/ode/ode/precision.h \
  C:\Program\ Files\Webots/include/ode/ode/compatibility.h \

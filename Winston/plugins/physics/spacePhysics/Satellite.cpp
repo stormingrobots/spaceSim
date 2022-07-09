@@ -47,19 +47,23 @@ Satellite::Satellite(const std::string name) : PhysicsObject(name) {}
 
 void Satellite::tick() {
   communicator.receive();
-  std::string msg = "";
+  std::string msg;
 
   while (!(msg = communicator.next()).empty()) {
-    // packet work here
-    double force = std::stod(msg);
-    dWebotsConsolePrintf("Set thruster force: %f\n", force);
-    addForce(force * getMass(), 0, 0);
+    int temp = msg.find(",");
+    std::string packet_name = msg.substr(0, temp);
+    std::string contents = msg.substr(temp + 1, msg.length() - temp - 1);
+
+    if (packet_name == "SET_THRUST") {
+      SetThrustPacket packet(contents);
+      this->thrusterForce = packet.get_thrust();
+    }
   }
+
+  addForce(thrusterForce * getMass(), 0, 0);
 }
 
-Communicator::Communicator() {
-  // stuff
-}
+Communicator::Communicator() {}
 
 void Communicator::send(int channel, std::string message) {
   std::string content = message;

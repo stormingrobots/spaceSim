@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Packet.hpp"
 #include "Util.hpp"
 
 #include <ode/ode.h>
@@ -7,14 +8,14 @@
 #include <queue>
 #include <string>
 
-#define MESSAGE_DELIMITER '!'
-
 class PhysicsObject {
 protected:
   std::string name;
 
   dGeomID geom;
   dBodyID body;
+
+  double thrusterForce;
 
 public:
   PhysicsObject(const std::string name);

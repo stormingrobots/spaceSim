@@ -8,32 +8,23 @@
 #include <iostream>
 #include <string>
 
+#include "Satellite.hpp"
 #include "SatelliteCommunication.hpp"
 
 using namespace webots;
 
 int main(int argc, char **argv) {
-  // create the Robot instance.
   Robot *robot = new Robot();
-  Emitter *emitter = robot->getEmitter("emitter");
-  Receiver *receiver = robot->getReceiver("receiver");
-
-  Communicator *communicator = new Communicator(emitter, receiver);
+  Satellite *sa = new Satellite(robot);
+  Thruster *thruster = sa->getThruster();
 
   int timeStep = (int)robot->getBasicTimeStep();
 
   std::cout << "Starting spaceship with timestep: " << timeStep << std::endl;
-  // std::cout << "Message: " << message.c_str() << std::endl;
-  // std::cout << "Message Length: " << std::strlen(message.c_str()) <<
-  // std::endl;
 
-  double counter = 0;
+  double counter = 10;
   while (robot->step(timeStep) != -1) {
-    // std::cout << "Thruster Velocity: " << thruster->getVelocity() <<
-    // std::endl;
-
-    counter = 1;
-    communicator->send(std::to_string(counter));
+    thruster->setThrust(counter);
   }
 
   // Enter here exit cleanup code.
