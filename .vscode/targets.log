@@ -8,12 +8,10 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 08 20:59:59 2022
+# Make data base, printed on Fri Jul 22 13:12:04 2022
 
 # Variables
 
-# environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -24,8 +22,6 @@ VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1
 USERPROFILE = C:\Users\riths
 # environment
 LOCALAPPDATA = C:\Users\riths\AppData\Local
-# environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-502da326-13b1-467c-8a74-0bea7e47b598-sock
 # environment
 VSCODE_CWD = C:\Users\riths\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -41,9 +37,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10776_BZNUWUWNWXCDNDFC
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6944_OFSBTGUPPCDBLNUX
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -54,12 +48,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 WEBOTS_HOME = C:\Program Files\Webots
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\riths\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = C:\Users\riths\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LANG = C
 # default
@@ -76,8 +68,6 @@ MAKEFLAGS = pqrR
 ONEDRIVE = C:\Users\riths\OneDrive
 # makefile
 CURDIR := c:/Users/riths/git/spaceSim
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -97,9 +87,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 10776
+VSCODE_PID = 6944
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -143,8 +131,6 @@ CHOCOLATEYLASTPATHUPDATE = 132711384934295716
 # environment
 LOGONSERVER = \\LAPTOP-V0O5GJAG
 # environment
-VSCODE_LOG_NATIVE = false
-# environment
 USERNAME = riths
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
@@ -164,6 +150,8 @@ USERDOMAIN = LAPTOP-V0O5GJAG
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := 
 # environment
@@ -197,7 +185,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\riths\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.68.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.69.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -206,8 +194,7 @@ VSCODE_IPC_HOOK = \\.\pipe\6a6c4371316603911156552fe73a7942-1.68.1-main-sock
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
-# en 
-vironment
+# environment
 SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
@@ -216,7 +203,7 @@ PROCESSOR_REVISION = 1801
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
 # variable set hash-table stats:
-# Load=101/1024=10%, Rehash=0, Collisions=10/125=8%
+# Load=95/1024=9%, Rehash=0, Collisions=8/119=7%
 
 # Pattern-specific Variable Values
 
@@ -289,6 +276,6 @@ GNUmakefile:
 # strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
-# Finished Make data base on Fri Jul 08 20:59:59 2022
+# Finished Make data base on Fri Jul 22 13:12:04 2022
 
  

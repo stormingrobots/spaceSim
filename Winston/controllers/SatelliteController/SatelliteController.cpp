@@ -10,21 +10,26 @@
 
 #include "Satellite.hpp"
 #include "SatelliteCommunication.hpp"
-
+ 
 using namespace webots;
 
 int main(int argc, char **argv) {
   Robot *robot = new Robot();
   Satellite *sa = new Satellite(robot);
-  Thruster *thruster = sa->getThruster();
+  Thruster *thrusterAlpha = sa->getThruster("alpha");
+  Thruster *thrusterBeta = sa->getThruster("beta");
+  Thruster *thrusterGamma = sa->getThruster("gamma");
+  Thruster *thrusterDelta = sa->getThruster("delta");
 
   int timeStep = (int)robot->getBasicTimeStep();
 
   std::cout << "Starting spaceship with timestep: " << timeStep << std::endl;
 
-  double counter = 10;
   while (robot->step(timeStep) != -1) {
-    thruster->setThrust(counter);
+    thrusterAlpha->setThrust(5);
+    thrusterBeta->setThrust(10);
+    thrusterGamma->setThrust(1000);
+    thrusterDelta->setThrust(-10);
   }
 
   // Enter here exit cleanup code.

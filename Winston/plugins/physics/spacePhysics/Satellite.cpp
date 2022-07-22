@@ -43,7 +43,12 @@ void PhysicsObject::setLinearVel(double x, double y, double z) {
   dBodySetLinearVel(body, x, y, z);
 }
 
-Satellite::Satellite(const std::string name) : PhysicsObject(name) {}
+Satellite::Satellite(const std::string name) : PhysicsObject(name) {
+  thrusters["alpha"] = new Thruster(10);
+  thrusters["beta"] = new Thruster(10);
+  thrusters["gamma"] = new Thruster(10);
+  thrusters["delta"] = new Thruster(10);
+}
 
 void Satellite::tick() {
   communicator.receive();
@@ -51,16 +56,19 @@ void Satellite::tick() {
 
   while (!(msg = communicator.next()).empty()) {
     int temp = msg.find(",");
-    std::string packet_name = msg.substr(0, temp);
+    std::string packetName = msg.substr(0, temp);
     std::string contents = msg.substr(temp + 1, msg.length() - temp - 1);
 
-    if (packet_name == "SET_THRUST") {
+    if (packetName == "SET_THRUST") {
       SetThrustPacket packet(contents);
-      this->thrusterForce = packet.get_thrust();
+      thrusters[packet.getName()]->setForce(packet.getThrust());
     }
   }
 
-  addForce(thrusterForce * getMass(), 0, 0);
+  dWebotsConsolePrintf("Alpha: %.2f\n", thrusters["alpha"]->getForce());
+  dWebotsConsolePrintf("Beta: %.2f\n", thrusters["beta"]->getForce());
+  dWebotsConsolePrintf("Gamma: %.2f\n", thrusters["gamma"]->getForce());
+  dWebotsConsolePrintf("Delta: %.2f\n", thrusters["delta"]->getForce());
 }
 
 Communicator::Communicator() {}
@@ -97,5 +105,7 @@ std::string Communicator::next() {
 Thruster::Thruster(const double maxForce) { this->maxForce = maxForce; }
 
 void Thruster::setForce(double force) {
-  this->force = std::min(force, maxForce);
+  this->force = clamp(force, 0, maxForce);
 }
+
+double Thruster::getForce() { return force; }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <map>
 #include <sstream>
 #include <string>
 
@@ -25,10 +26,10 @@ public:
 class Satellite {
 private:
   Communicator *communicator;
-  Thruster *thruster;
+  std::map<std::string, Thruster *> thrusters;
 
 public:
   Satellite(webots::Robot *robot);
   Communicator *getCommunicator();
-  Thruster *getThruster();
+  Thruster *getThruster(std::string name);
 };

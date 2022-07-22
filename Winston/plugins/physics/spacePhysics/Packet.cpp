@@ -18,9 +18,9 @@ std::string Packet::next() {
 }
 
 SetThrustPacket::SetThrustPacket(std::string raw) : Packet(raw) {
-  this->thruster_name = next();
+  this->thrusterName = next();
   this->thrust = std::stod(next());
 }
 
-std::string SetThrustPacket::get_name() { return this->thruster_name; }
-double SetThrustPacket::get_thrust() { return this->thrust; }
+std::string SetThrustPacket::getName() { return this->thrusterName; }
+double SetThrustPacket::getThrust() { return this->thrust; }

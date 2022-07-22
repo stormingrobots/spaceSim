@@ -16,12 +16,12 @@ public:
 
 class SetThrustPacket : public Packet {
 private:
-  std::string thruster_name;
+  std::string thrusterName;
   double thrust;
 
 public:
   SetThrustPacket(std::string raw);
 
-  std::string get_name();
-  double get_thrust();
+  std::string getName();
+  double getThrust();
 };

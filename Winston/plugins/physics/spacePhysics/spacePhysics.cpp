@@ -22,6 +22,8 @@ void webots_physics_init() {
 }
 
 void webots_physics_step() {
+
+  //// Gravity ////
   ship->setForce(0, 0, 0);
   ship->tick();
 
@@ -29,8 +31,8 @@ void webots_physics_step() {
   // dWebotsConsolePrintf("Ship: %f, %f, %f\n", sPos[0], sPos[1], sPos[2]);
 
   // at origin
-  //  const double *pPos = planet->getPosition();
-  //  dWebotsConsolePrintf("Planet: %f, %f, %f\n", pPos[0], pPos[1], pPos[2]);
+  // const double *pPos = planet->getPosition();
+  // dWebotsConsolePrintf("Planet: %f, %f, %f\n", pPos[0], pPos[1], pPos[2]);
 
   double magnitude = norm(sPos) * 1000; // meters
   // dWebotsConsolePrintf("Magnitude: %f\n", magnitude);

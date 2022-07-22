@@ -24,4 +24,4 @@ build/release/SpacePhysics.o: SpacePhysics.cpp SpacePhysics.hpp \
  C:\Program\ Files\Webots/include/ode/ode/odecpp.h \
  C:\Program\ Files\Webots/include/ode/ode/odecpp_collision.h \
  C:\Program\ Files\Webots/include/plugins/physics.h Satellite.hpp \
- Util.hpp
+ Packet.hpp Util.hpp

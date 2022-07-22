@@ -3,10 +3,12 @@
 #include "Packet.hpp"
 #include "Util.hpp"
 
-#include <ode/ode.h>
-#include <plugins/physics.h>
+#include <map>
 #include <queue>
 #include <string>
+
+#include <ode/ode.h>
+#include <plugins/physics.h>
 
 class PhysicsObject {
 protected:
@@ -55,12 +57,13 @@ private:
 public:
   Thruster(const double maxForce);
   void setForce(double force);
+  double getForce();
 };
 
 class Satellite : public PhysicsObject {
 private:
-  Thruster thruster = Thruster(10);
   Communicator communicator;
+  std::map<std::string, Thruster *> thrusters;
 
 public:
   Satellite(const std::string name);
