@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
 
   create_trail_shape(supervisor);
   
-  Node* root = supervisor->getRoot();
+  // Node* root = supervisor->getRoot();
   Node* target = supervisor->getFromDef("Satellite");
   
   Node* trailLineSet = supervisor->getFromDef("TRAIL_LINE_SET");
