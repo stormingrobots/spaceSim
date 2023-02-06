@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Users\\archon\\AppData\\Local\\Programs\\Webots\\include\\controller\\cpp",
+                "C:\\Users\\archon\\AppData\\Local\\Programs\\Webots\\include\\ode",
+                "C:\\Users\\archon\\AppData\\Local\\Programs\\Webots\\include",
+                "C:\\Users\\archon\\AppData\\Local\\Programs\\Webots\\msys64\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\12.2.0\\include",
+                "C:\\Users\\archon\\AppData\\Local\\Programs\\Webots\\msys64\\mingw64\\include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

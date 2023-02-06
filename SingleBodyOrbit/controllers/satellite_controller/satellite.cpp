@@ -1,4 +1,4 @@
-#include "Satellite.hpp"
+#include "satellite.hpp"
 
 Thruster::Thruster(Communicator *communicator, std::string name) {
   this->communicator = communicator;

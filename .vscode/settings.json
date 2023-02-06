@@ -58,6 +58,22 @@
 		"xtr1common": "cpp",
 		"xtree": "cpp",
 		"xutility": "cpp",
-		"sstream": "cpp"
-	}
+		"sstream": "cpp",
+		"cstdarg": "cpp",
+		"cwctype": "cpp",
+		"functional": "cpp",
+		"list": "cpp",
+		"numbers": "cpp",
+		"numeric": "cpp",
+		"optional": "cpp",
+		"random": "cpp",
+		"ranges": "cpp",
+		"span": "cpp",
+		"unordered_map": "cpp",
+		"xhash": "cpp",
+		"*.tcc": "cpp",
+		"memory_resource": "cpp",
+		"string_view": "cpp"
+	},
+	"editor.defaultFormatter": "ms-vscode.cpptools"
 }

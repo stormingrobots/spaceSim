@@ -9,7 +9,7 @@
 #include <webots/Receiver.hpp>
 #include <webots/Robot.hpp>
 
-#include "SatelliteCommunication.hpp"
+#include "communication.hpp"
 
 class Thruster {
 private:

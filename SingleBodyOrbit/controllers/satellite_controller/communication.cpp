@@ -1,4 +1,4 @@
-#include "SatelliteCommunication.hpp"
+#include "communication.hpp"
 
 Communicator::Communicator(webots::Emitter *emitter,
                            webots::Receiver *receiver) {

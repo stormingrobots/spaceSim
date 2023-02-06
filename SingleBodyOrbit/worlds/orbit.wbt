@@ -40,7 +40,8 @@ DEF Satellite Robot {
     density -1
     mass 420000
   }
-  controller "SatelliteController"
+  controller "satellite_controller"
+  linearVelocity 0 0 7.7
 }
 TexturedBackground {
 }
@@ -75,6 +76,6 @@ DEF Planet Solid {
 }
 Robot {
   name "Supervisor"
-  controller "SpacePhysicsSupervisor"
+  controller "physics_supervisor"
   supervisor TRUE
 }

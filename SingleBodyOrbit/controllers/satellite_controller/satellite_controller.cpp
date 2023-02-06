@@ -8,8 +8,8 @@
 #include <iostream>
 #include <string>
 
-#include "Satellite.hpp"
-#include "SatelliteCommunication.hpp"
+#include "satellite.hpp"
+#include "communication.hpp"
  
 using namespace webots;
 
