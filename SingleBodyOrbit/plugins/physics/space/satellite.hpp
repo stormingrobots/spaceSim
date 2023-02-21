@@ -1,7 +1,7 @@
 #pragma once
 
-#include "packet.hpp"
 #include "util.hpp"
+#include "communication.hpp"
 
 #include <map>
 #include <queue>
@@ -37,18 +37,6 @@ public:
   void addForce(double x, double y, double z);
 };
 
-class Communicator {
-private:
-  std::string buffer;
-  std::queue<std::string> messageQueue;
-
-public:
-  Communicator();
-  void send(int channel, std::string message);
-  void receive();
-  std::string next();
-};
-
 class Thruster {
 private:
   double force;
@@ -60,12 +48,11 @@ public:
   double getForce();
 };
 
-class Satellite : public PhysicsObject {
+class satellite : public PhysicsObject {
 private:
-  Communicator communicator;
-  std::map<std::string, Thruster *> thrusters;
+  communicator communicator;
 
 public:
-  Satellite(const std::string name);
+  satellite(const std::string name);
   void tick();
 };

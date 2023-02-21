@@ -73,7 +73,23 @@
 		"xhash": "cpp",
 		"*.tcc": "cpp",
 		"memory_resource": "cpp",
-		"string_view": "cpp"
+		"string_view": "cpp",
+		"chrono": "cpp",
+		"codecvt": "cpp",
+		"condition_variable": "cpp",
+		"coroutine": "cpp",
+		"filesystem": "cpp",
+		"forward_list": "cpp",
+		"fstream": "cpp",
+		"future": "cpp",
+		"iomanip": "cpp",
+		"mutex": "cpp",
+		"ratio": "cpp",
+		"semaphore": "cpp",
+		"source_location": "cpp",
+		"stop_token": "cpp",
+		"thread": "cpp",
+		"variant": "cpp"
 	},
 	"editor.defaultFormatter": "ms-vscode.cpptools"
 }

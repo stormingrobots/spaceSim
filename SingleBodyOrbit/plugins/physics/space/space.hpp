@@ -3,8 +3,8 @@
 #include <ode/ode.h>
 #include <plugins/physics.h>
 
-#include "Satellite.hpp"
-#include "Util.hpp"
+#include "satellite.hpp"
+#include "util.hpp"
 
 // Physics Constants
 const static double MU_EARTH = 3.9860442e14;

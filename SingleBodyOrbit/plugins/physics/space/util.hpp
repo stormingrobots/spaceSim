@@ -2,5 +2,9 @@
 
 #include <cmath>
 
-double norm(const double *pos);
+#include <plugins/physics.h>
+
+double norm(const double* pos);
 double clamp(const double val, const double minVal, const double maxVal);
+
+#define log dWebotsConsolePrintf

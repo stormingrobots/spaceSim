@@ -4,13 +4,13 @@
 static pthread_mutex_t mutex;
 
 static PhysicsObject *planet;
-static Satellite *ship;
+static satellite *ship;
 
 void webots_physics_init() {
   pthread_mutex_init(&mutex, NULL);
 
   planet = new PhysicsObject("Planet");
-  ship = new Satellite("Satellite");
+  ship = new satellite("Satellite");
 
   planet->printInfo();
   ship->printInfo();

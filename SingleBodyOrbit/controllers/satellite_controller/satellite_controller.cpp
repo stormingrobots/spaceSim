@@ -14,25 +14,15 @@
 using namespace webots;
 
 int main(int argc, char **argv) {
-  Robot *robot = new Robot();
-  Satellite *sa = new Satellite(robot);
-  Thruster *thrusterAlpha = sa->getThruster("alpha");
-  Thruster *thrusterBeta = sa->getThruster("beta");
-  Thruster *thrusterGamma = sa->getThruster("gamma");
-  Thruster *thrusterDelta = sa->getThruster("delta");
-
+  webots::Robot *robot = new webots::Robot();
+  satellite satellite(robot);
   int timeStep = (int)robot->getBasicTimeStep();
 
-  std::cout << "Starting spaceship with timestep: " << timeStep << std::endl;
+  std::cout << "[Satellite] Starting spaceship with timestep: " << timeStep << std::endl;
 
   while (robot->step(timeStep) != -1) {
-    thrusterAlpha->setThrust(5);
-    thrusterBeta->setThrust(10);
-    thrusterGamma->setThrust(1000);
-    thrusterDelta->setThrust(-10);
+    satellite.tick();
   }
-
-  // Enter here exit cleanup code.
 
   delete robot;
   return 0;

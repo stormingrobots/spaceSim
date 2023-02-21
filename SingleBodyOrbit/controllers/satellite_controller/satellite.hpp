@@ -11,25 +11,11 @@
 
 #include "communication.hpp"
 
-class Thruster {
+class satellite {
 private:
-  Communicator *communicator;
-  std::string name;
-  double thrust = 0;
+  communicator* comms;
 
 public:
-  Thruster(Communicator *communicator, std::string name);
-  void setThrust(double thrust);
-  double getThrust();
-};
-
-class Satellite {
-private:
-  Communicator *communicator;
-  std::map<std::string, Thruster *> thrusters;
-
-public:
-  Satellite(webots::Robot *robot);
-  Communicator *getCommunicator();
-  Thruster *getThruster(std::string name);
+  satellite(webots::Robot* robot);
+  void tick();
 };

@@ -1,25 +1,38 @@
 #pragma once
 
+#include <cstdint>
+#include <iostream>
+
 #include <webots/Emitter.hpp>
 #include <webots/Receiver.hpp>
-#include <webots/Robot.hpp>
 
-#include <queue>
-#include <string>
+#define RECEIVER_SAMPLING_PERIOD 1
+#define RECEIVER_CHANNEL 1
+#define EMITTER_CHANNEL 0
 
-#define MESSAGE_DELIMITER '!'
+#define PING_PACKET 0x01
 
-class Communicator {
+struct packet_header {
+  uint8_t magic = 0x29;
+  uint8_t type;
+};
+
+class communicator {
 private:
   std::string buffer;
-  std::queue<std::string> messageQueue;
+  webots::Emitter* emitter;
+  webots::Receiver* receiver;
 
-  webots::Emitter *emitter;
-  webots::Receiver *receiver;
+  template <typename T>
+  void sendBlock(T block);
+  void sendHeader(uint8_t type);
+
+  template<typename T>
+  T readBlock();
 
 public:
-  Communicator(webots::Emitter *emitter, webots::Receiver *receiver);
-  void send(std::string message);
-  void receive();
-  std::string next();
+  communicator(webots::Emitter* emitter, webots::Receiver* receiver);
+
+  void sendPing();
+  void poll();
 };

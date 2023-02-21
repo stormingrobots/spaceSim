@@ -65,7 +65,7 @@
 ###
 ###-----------------------------------------------------------------------------
 
-CXX_SOURCES = space.cpp util.cpp satellite.cpp packet.cpp
+CXX_SOURCES = space.cpp util.cpp satellite.cpp communication.cpp
 
 ### Do not modify: this includes Webots global Makefile.include
 null :=
