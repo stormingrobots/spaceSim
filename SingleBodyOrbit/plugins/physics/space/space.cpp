@@ -3,13 +3,13 @@
 // only if manipulating joints
 static pthread_mutex_t mutex;
 
-static PhysicsObject *planet;
+static physics_object *planet;
 static satellite *ship;
 
 void webots_physics_init() {
   pthread_mutex_init(&mutex, NULL);
 
-  planet = new PhysicsObject("Planet");
+  planet = new physics_object("Planet");
   ship = new satellite("Satellite");
 
   planet->printInfo();

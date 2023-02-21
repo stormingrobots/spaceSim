@@ -1,6 +1,21 @@
 #include "satellite.hpp"
 
-PhysicsObject::PhysicsObject(std::string name) {
+std::string physics_radio::readData() {
+  int bytes = 0;
+  const void* data = dWebotsReceive(&bytes);
+  return std::string((char*)data, bytes);
+}
+
+void physics_radio::sendData(const void* data, int size) {
+  dWebotsSend(EMITTER_CHANNEL, data, size);
+}
+
+void physics_radio::onPing() {
+  log("[Radio] Ping recieved!");
+  sendPing();
+}
+
+physics_object::physics_object(std::string name) {
   this->name = name;
   geom = dWebotsGetGeomFromDEF(name.c_str());
   body = dGeomGetBody(geom);
@@ -8,42 +23,42 @@ PhysicsObject::PhysicsObject(std::string name) {
   dBodySetGravityMode(body, 0);
 }
 
-dGeomID PhysicsObject::getGeom() { return geom; }
+dGeomID physics_object::getGeom() { return geom; }
 
-dBodyID PhysicsObject::getBody() { return body; }
+dBodyID physics_object::getBody() { return body; }
 
-double PhysicsObject::getMass() {
+double physics_object::getMass() {
   dMass mass;
   dBodyGetMass(body, &mass);
   return mass.mass;
 }
 
-const double *PhysicsObject::getPosition() { return dBodyGetPosition(body); }
+const double *physics_object::getPosition() { return dBodyGetPosition(body); }
 
-void PhysicsObject::printInfo() {
+void physics_object::printInfo() {
   log("[Physics] [%s] %p %p\n", name.c_str(), geom, body);
 }
 
-void PhysicsObject::setMass(double val) {
+void physics_object::setMass(double val) {
   dMass mass;
   dBodyGetMass(body, &mass);
   mass.mass = val;
   dBodySetMass(body, &mass);
 }
 
-void PhysicsObject::setForce(double x, double y, double z) {
+void physics_object::setForce(double x, double y, double z) {
   dBodySetForce(body, x, y, z);
 }
 
-void PhysicsObject::addForce(double x, double y, double z) {
+void physics_object::addForce(double x, double y, double z) {
   dBodyAddForce(body, x, y, z);
 }
 
-void PhysicsObject::setLinearVel(double x, double y, double z) {
+void physics_object::setLinearVel(double x, double y, double z) {
   dBodySetLinearVel(body, x, y, z);
 }
 
-satellite::satellite(const std::string name) : PhysicsObject(name) {
+satellite::satellite(const std::string name) : physics_object(name) {
 //   thrusters["alpha"] = new Thruster(10);
 //   thrusters["beta"] = new Thruster(10);
 //   thrusters["gamma"] = new Thruster(10);
@@ -51,14 +66,5 @@ satellite::satellite(const std::string name) : PhysicsObject(name) {
 }
 
 void satellite::tick() {
-  communicator.poll();
-  communicator.sendPing();
+  radio.poll();
 }
-
-Thruster::Thruster(const double maxForce) { this->maxForce = maxForce; }
-
-void Thruster::setForce(double force) {
-  this->force = clamp(force, 0, maxForce);
-}
-
-double Thruster::getForce() { return force; }

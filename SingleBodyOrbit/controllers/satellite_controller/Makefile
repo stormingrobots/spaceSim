@@ -65,7 +65,14 @@
 ###
 ###-----------------------------------------------------------------------------
 
-CXX_SOURCES = satellite_controller.cpp communication.cpp satellite.cpp
+# Libraries
+
+CXX_SOURCES = ./../../libraries/radio.cpp
+INCLUDE = -I"./../../libraries"
+
+# Program
+
+CXX_SOURCES += satellite_controller.cpp satellite.cpp
 
 ### Do not modify: this includes Webots global Makefile.include
 null :=

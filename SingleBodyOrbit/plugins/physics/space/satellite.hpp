@@ -1,7 +1,7 @@
 #pragma once
 
 #include "util.hpp"
-#include "communication.hpp"
+#include "radio.hpp"
 
 #include <map>
 #include <queue>
@@ -10,7 +10,18 @@
 #include <ode/ode.h>
 #include <plugins/physics.h>
 
-class PhysicsObject {
+#define RECEIVER_CHANNEL 0
+#define EMITTER_CHANNEL 1
+
+class physics_radio: public radio {
+protected:
+  std::string readData() override;
+  void sendData(const void* data, int size) override;
+
+  void onPing() override;
+};
+
+class physics_object {
 protected:
   std::string name;
 
@@ -20,13 +31,13 @@ protected:
   double thrusterForce;
 
 public:
-  PhysicsObject(const std::string name);
+  physics_object(const std::string name);
 
   dGeomID getGeom();
   dBodyID getBody();
   double getMass();
   double getVelocity(); // TODO
-  const double *getPosition();
+  const double* getPosition();
 
   void printInfo();
 
@@ -37,20 +48,9 @@ public:
   void addForce(double x, double y, double z);
 };
 
-class Thruster {
+class satellite: public physics_object {
 private:
-  double force;
-  double maxForce;
-
-public:
-  Thruster(const double maxForce);
-  void setForce(double force);
-  double getForce();
-};
-
-class satellite : public PhysicsObject {
-private:
-  communicator communicator;
+  physics_radio radio;
 
 public:
   satellite(const std::string name);
