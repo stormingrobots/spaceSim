@@ -1,14 +1,8 @@
 #pragma once
 
-#include <cstdint>
+#include "packets.hpp"
+
 #include <string>
-
-#define PING_PACKET 0x01
-
-struct packet_header {
-  uint8_t magic = 0x29;
-  uint8_t type;
-};
 
 class radio {
 private:
@@ -28,9 +22,11 @@ protected:
   // what to do when certain packets are recieved
   // ensure body data is passed on for more complex packets
   virtual void onPing() = 0;
+  virtual void onThrustSet(thrust_set_body data) = 0;
 
 public:
   void poll();
 
   void sendPing();
+  void setThrust(unsigned char id, double thrust);
 };

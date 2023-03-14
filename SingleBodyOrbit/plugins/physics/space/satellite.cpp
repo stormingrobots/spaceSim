@@ -15,6 +15,15 @@ void physics_radio::onPing() {
   sendPing();
 }
 
+void physics_radio::onThrustSet(thrust_set_body data) {
+  log("[Radio] Thrust set recieved! %d %f", data.id, data.thrust);
+  parent->getThruster(data.id)->setThrust(data.thrust);
+}
+
+physics_radio::physics_radio(satellite *parent) {
+  this->parent = parent;
+}
+
 physics_object::physics_object(std::string name) {
   this->name = name;
   geom = dWebotsGetGeomFromDEF(name.c_str());
@@ -58,13 +67,29 @@ void physics_object::setLinearVel(double x, double y, double z) {
   dBodySetLinearVel(body, x, y, z);
 }
 
+physics_thruster::physics_thruster(satellite *parent, int id) {
+  this->parent = parent;
+  this->id = id;
+}
+
+double physics_thruster::getThrust() { return thrust; }
+
+int physics_thruster::getId() { return id; }
+
+void physics_thruster::setThrust(double thrust) {
+  this->thrust = thrust;
+}
+
 satellite::satellite(const std::string name) : physics_object(name) {
-//   thrusters["alpha"] = new Thruster(10);
-//   thrusters["beta"] = new Thruster(10);
-//   thrusters["gamma"] = new Thruster(10);
-//   thrusters["delta"] = new Thruster(10);
+  satelliteRadio = new physics_radio(this);
+  for(int i = 0; i < 20; i++)
+    thrusters.push_back(new physics_thruster(this, i));
 }
 
 void satellite::tick() {
-  radio.poll();
+  satelliteRadio->poll();
+}
+
+thruster *satellite::getThruster(int id) {
+  return thrusters[id];
 }

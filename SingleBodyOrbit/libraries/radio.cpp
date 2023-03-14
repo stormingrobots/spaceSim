@@ -14,6 +14,7 @@ void radio::sendHeader(uint8_t type) {
 template <typename T>
 T radio::readBlock() {
   T block;
+  if(buffer.size() < sizeof(block)) return block; // return empty block, incomplete packet
   memcpy(&block, buffer.data(), sizeof(block));
   buffer = buffer.substr(sizeof(block));
   return block;
@@ -31,11 +32,26 @@ void radio::poll() {
     }
 
     switch (header.type) {
-    case PING_PACKET: onPing(); break;
+    case PING_PACKET:
+      onPing();
+      break;
+
+    case THRUST_SET_REQUEST:
+      onThrustSet(readBlock<thrust_set_body>());
+      break;
     }
   }
 }
 
 void radio::sendPing() {
   sendHeader(PING_PACKET);
+}
+
+void radio::setThrust(unsigned char id, double thrust) {
+  thrust_set_body body;
+  body.id = id;
+  body.thrust = thrust;
+
+  sendHeader(THRUST_SET_REQUEST);
+  sendBlock<thrust_set_body>(body);
 }
