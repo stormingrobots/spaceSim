@@ -7,11 +7,11 @@
 #include <string>
 
 #include "satellite.hpp"
- 
+
 using namespace webots;
 
-int main(int argc, char **argv) {
-  webots::Robot *robot = new webots::Robot();
+int main(int argc, char** argv) {
+  webots::Robot* robot = new webots::Robot();
   satellite satellite(robot);
   int timeStep = (int)robot->getBasicTimeStep();
 

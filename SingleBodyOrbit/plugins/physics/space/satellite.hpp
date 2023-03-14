@@ -15,24 +15,29 @@
 #define RECEIVER_CHANNEL 0
 #define EMITTER_CHANNEL 1
 
-class physics_radio: public radio {
+class physics_radio;
+class physics_object;
+class physics_thruster;
+class satellite;
 
-private:
+class physics_radio : public radio {
+
+  private:
   satellite* parent;
 
-protected:
+  protected:
   std::string readData() override;
   void sendData(const void* data, int size) override;
 
   void onPing() override;
   void onThrustSet(thrust_set_body data) override;
 
-public:
+  public:
   physics_radio(satellite* parent);
 };
 
 class physics_object {
-protected:
+  protected:
   std::string name;
 
   dGeomID geom;
@@ -40,7 +45,7 @@ protected:
 
   double thrusterForce;
 
-public:
+  public:
   physics_object(const std::string name);
 
   dGeomID getGeom();
@@ -59,12 +64,12 @@ public:
 };
 
 class physics_thruster : public thruster {
-private:
+  private:
   satellite* parent;
   int id;
   double thrust;
 
-public:
+  public:
   physics_thruster(satellite* parent, int id);
 
   double getThrust() override;
@@ -73,14 +78,14 @@ public:
   void setThrust(double thrust) override;
 };
 
-class satellite: public physics_object {
-private:
-  radio *satelliteRadio;
+class satellite : public physics_object {
+  private:
+  radio* satelliteRadio;
   std::vector<thruster*> thrusters;
 
-public:
+  public:
   satellite(const std::string name);
   void tick();
 
-  thruster *getThruster(int id);
+  thruster* getThruster(int id);
 };

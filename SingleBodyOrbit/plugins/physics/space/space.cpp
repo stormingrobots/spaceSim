@@ -3,8 +3,8 @@
 // only if manipulating joints
 static pthread_mutex_t mutex;
 
-static physics_object *planet;
-static satellite *ship;
+static physics_object* planet;
+static satellite* ship;
 
 void webots_physics_init() {
   pthread_mutex_init(&mutex, NULL);
@@ -27,7 +27,7 @@ void webots_physics_step() {
   ship->setForce(0, 0, 0);
   ship->tick();
 
-  const double *sPos = ship->getPosition();
+  const double* sPos = ship->getPosition();
   // dWebotsConsolePrintf("Ship: %f, %f, %f\n", sPos[0], sPos[1], sPos[2]);
 
   // at origin
@@ -38,7 +38,7 @@ void webots_physics_step() {
   // dWebotsConsolePrintf("Magnitude: %f\n", magnitude);
 
   double fr2 =
-      (ship->getMass() * MU_EARTH / (magnitude * magnitude * magnitude));
+    (ship->getMass() * MU_EARTH / (magnitude * magnitude * magnitude));
 
   double f[3];
   f[0] = -fr2 * sPos[0];

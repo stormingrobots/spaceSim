@@ -51,7 +51,7 @@ satellite::satellite(webots::Robot* robot) {
   webots::Receiver* receiver = robot->getReceiver("receiver");
   satelliteRadio = new satellite_radio(emitter, receiver);
 
-  for(int i = 0; i < 20; i++)
+  for (int i = 0; i < 20; i++)
     thrusters.push_back(new satellite_thruster(i, this));
 
   satelliteRadio->sendPing();

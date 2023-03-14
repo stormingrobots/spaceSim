@@ -3,7 +3,7 @@
 #include <string>
 
 class thruster {
-public:
+  public:
   virtual void setThrust(double thrust) = 0;
   virtual double getThrust() = 0;
   virtual int getId() = 0;

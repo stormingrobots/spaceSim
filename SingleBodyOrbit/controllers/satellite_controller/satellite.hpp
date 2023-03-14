@@ -17,29 +17,33 @@
 #define RECEIVER_CHANNEL 1
 #define EMITTER_CHANNEL 0
 
+class satellite;
+class satellite_radio;
+class satellite_thruster;
+
 class satellite_radio : public radio {
-private:
+  private:
   webots::Emitter* emitter;
   webots::Receiver* receiver;
 
-protected:
+  protected:
   std::string readData() override;
   void sendData(const void* data, int size) override;
 
   void onPing() override;
   void onThrustSet(thrust_set_body data) override;
 
-public:
+  public:
   satellite_radio(webots::Emitter* emitter, webots::Receiver* receiver);
 };
 
 class satellite_thruster : public thruster {
-private:
+  private:
   int id;
   double thrust;
   satellite* parent;
 
-public:
+  public:
   satellite_thruster(int id, satellite* parent);
   void setThrust(double thrust) override;
   double getThrust() override;
@@ -47,14 +51,14 @@ public:
 };
 
 class satellite {
-private:
+  private:
   radio* satelliteRadio;
   std::vector<thruster*> thrusters;
 
-public:
+  public:
   satellite(webots::Robot* robot);
   void tick();
-  
+
   radio* getRadio();
   thruster* getThruster(int id);
 };

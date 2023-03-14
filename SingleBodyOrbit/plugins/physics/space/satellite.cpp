@@ -20,7 +20,7 @@ void physics_radio::onThrustSet(thrust_set_body data) {
   parent->getThruster(data.id)->setThrust(data.thrust);
 }
 
-physics_radio::physics_radio(satellite *parent) {
+physics_radio::physics_radio(satellite* parent) {
   this->parent = parent;
 }
 
@@ -42,7 +42,7 @@ double physics_object::getMass() {
   return mass.mass;
 }
 
-const double *physics_object::getPosition() { return dBodyGetPosition(body); }
+const double* physics_object::getPosition() { return dBodyGetPosition(body); }
 
 void physics_object::printInfo() {
   log("[Physics] [%s] %p %p\n", name.c_str(), geom, body);
@@ -67,7 +67,7 @@ void physics_object::setLinearVel(double x, double y, double z) {
   dBodySetLinearVel(body, x, y, z);
 }
 
-physics_thruster::physics_thruster(satellite *parent, int id) {
+physics_thruster::physics_thruster(satellite* parent, int id) {
   this->parent = parent;
   this->id = id;
 }
@@ -82,7 +82,7 @@ void physics_thruster::setThrust(double thrust) {
 
 satellite::satellite(const std::string name) : physics_object(name) {
   satelliteRadio = new physics_radio(this);
-  for(int i = 0; i < 20; i++)
+  for (int i = 0; i < 20; i++)
     thrusters.push_back(new physics_thruster(this, i));
 }
 
@@ -90,6 +90,6 @@ void satellite::tick() {
   satelliteRadio->poll();
 }
 
-thruster *satellite::getThruster(int id) {
+thruster* satellite::getThruster(int id) {
   return thrusters[id];
 }
