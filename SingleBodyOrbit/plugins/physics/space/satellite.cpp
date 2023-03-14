@@ -12,11 +12,11 @@ void physics_radio::sendData(const void* data, int size) {
 
 void physics_radio::onPing() {
   log("[Radio] Ping recieved!");
-  sendPing();
+  // sendPing();
 }
 
 void physics_radio::onThrustSet(thrust_set_body data) {
-  log("[Radio] Thrust set recieved! %d %f", data.id, data.thrust);
+  log("[Radio] Thruster %d set to %f", data.id, data.thrust);
   parent->getThruster(data.id)->setThrust(data.thrust);
 }
 

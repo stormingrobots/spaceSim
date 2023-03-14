@@ -21,7 +21,7 @@ void satellite_radio::sendData(const void* data, int size) {
 
 void satellite_radio::onPing() {
   std::cout << "[Satellite] Received Ping!" << std::endl;
-  sendPing();
+  // sendPing();
 }
 
 void satellite_radio::onThrustSet(thrust_set_body data) {
@@ -35,6 +35,7 @@ satellite_thruster::satellite_thruster(int id, satellite* parent) {
 
 void satellite_thruster::setThrust(double thrust) {
   this->thrust = thrust;
+  std::cout << "[Satellite] Setting Thruster #" << id << " to " << thrust << std::endl;
   parent->getRadio()->setThrust(id, thrust);
 }
 

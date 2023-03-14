@@ -5,5 +5,5 @@ sceneTreePerspectives: 000000ff00000001000000030000001e000000c0000000fa010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "plugins/physics/space/space.cpp"
+textFiles: 1 "plugins/physics/space/space.cpp" "controllers/satellite_controller/satellite_controller.cpp"
 consoles: Console:All:All
