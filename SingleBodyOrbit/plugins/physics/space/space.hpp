@@ -6,9 +6,6 @@
 #include "satellite.hpp"
 #include "util.hpp"
 
-// Physics Constants
-const static double MU_EARTH = 3.9860442e14;
-
 // Bodies Config
 const static double PLANET_MASS = 3e30;
 

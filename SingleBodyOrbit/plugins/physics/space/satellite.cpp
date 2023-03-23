@@ -42,7 +42,10 @@ double physics_object::getMass() {
   return mass.mass;
 }
 
-const double* physics_object::getPosition() { return dBodyGetPosition(body); }
+vec3d physics_object::getPosition() {
+  const double* pos = dBodyGetPosition(body);
+  return { pos[0], pos[1], pos[2] };
+}
 
 void physics_object::printInfo() {
   log("[Physics] [%s] %p %p\n", name.c_str(), geom, body);
@@ -55,16 +58,16 @@ void physics_object::setMass(double val) {
   dBodySetMass(body, &mass);
 }
 
-void physics_object::setForce(double x, double y, double z) {
-  dBodySetForce(body, x, y, z);
+void physics_object::setForce(vec3d force) {
+  dBodySetForce(body, force.x, force.y, force.z);
 }
 
-void physics_object::addForce(double x, double y, double z) {
-  dBodyAddForce(body, x, y, z);
+void physics_object::addForce(vec3d force) {
+  dBodyAddForce(body, force.x, force.y, force.z);
 }
 
-void physics_object::setLinearVel(double x, double y, double z) {
-  dBodySetLinearVel(body, x, y, z);
+void physics_object::setLinearVelocity(vec3d velocity) {
+  dBodySetLinearVel(body, velocity.x, velocity.y, velocity.z);
 }
 
 physics_thruster::physics_thruster(satellite* parent, int id) {
@@ -88,6 +91,13 @@ satellite::satellite(const std::string name) : physics_object(name) {
 
 void satellite::tick() {
   satelliteRadio->poll();
+  setForce(vec3d());
+
+  //gravity
+  vec3d pos = getPosition();
+  double magnitude = pos.norm() * 1000; // km -> m
+  double fr2 = getMass() * MU_EARTH / (magnitude * magnitude * magnitude);
+  addForce(pos * -fr2);
 }
 
 thruster* satellite::getThruster(int id) {

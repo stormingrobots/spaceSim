@@ -9,8 +9,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.3119515532986065 0.6461272946469475 0.6965671162973481 3.948400517644136
-  position 7735.877776430491 311.253462566507 -1428.1393063503629
+  orientation 0.40741965665824575 0.5845098687463154 0.7016818628884763 4.192315115103936
+  position 6804.677820532259 4.863156788476394 -18.576379067617992
   follow "Earth"
   followType "None"
 }
@@ -28,20 +28,19 @@ DEF Satellite Robot {
         metalness 0
       }
       geometry Box {
-        size 100 100 100
+        size 1 1 1
       }
     }
   ]
   name "Spaceship"
   boundingObject Box {
-    size 100 100 100
+    size 1 1 1
   }
   physics Physics {
     density -1
     mass 420000
   }
   controller "satellite_controller"
-  linearVelocity 0 0 7.7
 }
 TexturedBackground {
 }

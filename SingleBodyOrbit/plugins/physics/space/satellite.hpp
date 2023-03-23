@@ -52,15 +52,15 @@ class physics_object {
   dBodyID getBody();
   double getMass();
   double getVelocity(); // TODO
-  const double* getPosition();
+  vec3d getPosition();
 
   void printInfo();
 
   void setMass(double mass);
-  void setForce(double x, double y, double z);
-  void setLinearVel(double x, double y, double z);
+  void setForce(vec3d force);
+  void setLinearVelocity(vec3d velocity);
 
-  void addForce(double x, double y, double z);
+  void addForce(vec3d force);
 };
 
 class physics_thruster : public thruster {
