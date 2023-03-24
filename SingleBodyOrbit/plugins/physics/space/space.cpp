@@ -12,13 +12,11 @@ void webots_physics_init() {
   planet = new physics_object("Planet");
   ship = new satellite("Satellite");
 
+  planet->setMass(PLANET_MASS);
+  ship->init();
+
   planet->printInfo();
   ship->printInfo();
-
-  planet->setMass(PLANET_MASS);
-
-  ship->setMass(SHIP_MASS);
-  ship->setLinearVelocity({ 0, 0, SHIP_VEL });
 }
 
 void webots_physics_step() {

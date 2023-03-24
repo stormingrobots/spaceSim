@@ -62,12 +62,16 @@ void physics_object::setForce(vec3d force) {
   dBodySetForce(body, force.x, force.y, force.z);
 }
 
+void physics_object::setLinearVelocity(vec3d velocity) {
+  dBodySetLinearVel(body, velocity.x, velocity.y, velocity.z);
+}
+
 void physics_object::addForce(vec3d force) {
   dBodyAddForce(body, force.x, force.y, force.z);
 }
 
-void physics_object::setLinearVelocity(vec3d velocity) {
-  dBodySetLinearVel(body, velocity.x, velocity.y, velocity.z);
+void physics_object::addRelForce(vec3d offset, vec3d force) {
+  dBodyAddRelForceAtRelPos(body, force.x, force.y, force.z, offset.x, offset.y, offset.z);
 }
 
 physics_thruster::physics_thruster(satellite* parent, int id) {
@@ -87,6 +91,11 @@ satellite::satellite(const std::string name) : physics_object(name) {
   satelliteRadio = new physics_radio(this);
   for (int i = 0; i < 20; i++)
     thrusters.push_back(new physics_thruster(this, i));
+}
+
+void satellite::init() {
+  setMass(SHIP_MASS);
+  setLinearVelocity({ 0, 0, SHIP_VEL });
 }
 
 void satellite::tick() {

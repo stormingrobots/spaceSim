@@ -9,9 +9,6 @@
 // Bodies Config
 const static double PLANET_MASS = 3e30;
 
-const static double SHIP_MASS = 420000; // ISS Mass
-const static double SHIP_VEL = 7.7;
-
 void webots_physics_init();
 void webots_physics_step();
 void webots_physics_step_end();
