@@ -71,13 +71,16 @@ class physics_thruster : public thruster {
   private:
   satellite* parent;
   int id;
+  vec3d offset, direction;
   double thrust;
 
   public:
-  physics_thruster(satellite* parent, int id);
+  physics_thruster(satellite* parent, int id, vec3d offset, vec3d direction);
 
-  double getThrust() override;
   int getId() override;
+  double getThrust() override;
+  vec3d getForce();
+  vec3d getOffset();
 
   void setThrust(double thrust) override;
 };
@@ -85,7 +88,7 @@ class physics_thruster : public thruster {
 class satellite : public physics_object {
   private:
   radio* satelliteRadio;
-  std::vector<thruster*> thrusters;
+  std::vector<physics_thruster*> thrusters;
 
   public:
   satellite(const std::string name);
