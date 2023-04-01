@@ -4,9 +4,6 @@
 
 #include <plugins/physics.h>
 
-// Physics Constants
-const static double MU_EARTH = 3.9860442e14;
-
 class vec3d {
   public:
   double x, y, z;

@@ -15,8 +15,7 @@
 #define RECEIVER_CHANNEL 0
 #define EMITTER_CHANNEL 1
 
-const static double SHIP_MASS = 420000; // ISS Mass
-const static double SHIP_VEL = 7.7;
+#define GRAVITATIONAL_CONSTANT 6.6743015e-11
 
 class physics_radio;
 class physics_object;
@@ -49,7 +48,8 @@ class physics_object {
   double thrusterForce;
 
   public:
-  physics_object(const std::string name);
+  physics_object();
+  void init(std::string name);
 
   dGeomID getGeom();
   dBodyID getBody();
@@ -65,6 +65,8 @@ class physics_object {
 
   void addForce(vec3d force);
   void addRelForce(vec3d offset, vec3d force);
+
+  void applyGravity(physics_object& other);
 };
 
 class physics_thruster : public thruster {
@@ -91,8 +93,8 @@ class satellite : public physics_object {
   std::vector<physics_thruster*> thrusters;
 
   public:
-  satellite(const std::string name);
-  void init();
+  satellite();
+  void init(const std::string& name);
   void tick();
 
   thruster* getThruster(int id);

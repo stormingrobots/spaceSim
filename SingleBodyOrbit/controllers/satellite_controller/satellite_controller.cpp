@@ -22,9 +22,9 @@ int main(int argc, char** argv) {
   while (robot->step(timeStep) != -1) {
     satellite.tick();
 
-    counter = (counter + 1) % 20;
+    // counter = (counter + 1) % 20;
 
-    satellite.getThruster(counter)->setThrust(rand() / (double(RAND_MAX)));
+    // satellite.getThruster(counter)->setThrust(rand() / (double(RAND_MAX)));
   }
 
   delete robot;

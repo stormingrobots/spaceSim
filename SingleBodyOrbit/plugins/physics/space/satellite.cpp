@@ -24,7 +24,9 @@ physics_radio::physics_radio(satellite* parent) {
   this->parent = parent;
 }
 
-physics_object::physics_object(std::string name) {
+physics_object::physics_object() {}
+
+void physics_object::init(std::string name) {
   this->name = name;
   geom = dWebotsGetGeomFromDEF(name.c_str());
   body = dGeomGetBody(geom);
@@ -74,6 +76,14 @@ void physics_object::addRelForce(vec3d offset, vec3d force) {
   dBodyAddRelForceAtRelPos(body, force.x, force.y, force.z, offset.x, offset.y, offset.z);
 }
 
+void physics_object::applyGravity(physics_object& other) {
+  vec3d radius =  getPosition() - other.getPosition();
+  double dist = radius.norm() * 1000; // km -> m
+  vec3d force = radius.unit() *
+    (GRAVITATIONAL_CONSTANT * getMass() * other.getMass() / (dist * dist * dist));
+  other.addForce(force);
+}
+
 physics_thruster::physics_thruster(satellite* parent, int id, vec3d offset, vec3d direction) {
   this->parent = parent;
   this->id = id;
@@ -93,31 +103,23 @@ void physics_thruster::setThrust(double thrust) {
   this->thrust = thrust;
 }
 
-satellite::satellite(const std::string name) : physics_object(name) {
+satellite::satellite() {
   satelliteRadio = new physics_radio(this);
   for (int i = 0; i < 20; i++)
     thrusters.push_back(new physics_thruster(this, i, { 0, 0, 0 }, { 1, 0, 0 }));
 }
 
-void satellite::init() {
-  setMass(SHIP_MASS);
-  setLinearVelocity({ 0, 0, SHIP_VEL });
+void satellite::init(const std::string& name) {
+  physics_object::init(name);
 }
 
 void satellite::tick() {
   satelliteRadio->poll();
-  setForce(vec3d());
-
-  //gravity
-  vec3d pos = getPosition();
-  double magnitude = pos.norm() * 1000; // km -> m
-  double fr2 = getMass() * MU_EARTH / (magnitude * magnitude * magnitude);
-  addForce(pos * -fr2);
 
   //thrust
-  for (auto thruster : thrusters) {
-    addRelForce(thruster->getOffset(), thruster->getForce());
-  }
+  // for (auto thruster : thrusters) {
+  //   addRelForce(thruster->getOffset(), thruster->getForce());
+  // }
 }
 
 thruster* satellite::getThruster(int id) {

@@ -3,24 +3,32 @@
 // only if manipulating joints
 static pthread_mutex_t mutex;
 
-static physics_object* planet;
-static satellite* ship;
+static physics_object planet;
+static satellite ship;
+
+static std::vector<physics_object> objects;
 
 void webots_physics_init() {
   pthread_mutex_init(&mutex, NULL);
 
-  planet = new physics_object("Planet");
-  ship = new satellite("Satellite");
+  planet.init("Planet");
+  planet.setMass(PLANET_MASS);
 
-  planet->setMass(PLANET_MASS);
-  ship->init();
+  ship.init("Satellite");
+  ship.setMass(SHIP_MASS);
+  ship.setLinearVelocity({ 0, 0, SHIP_VEL });
 
-  planet->printInfo();
-  ship->printInfo();
+  objects.push_back(planet);
 }
 
 void webots_physics_step() {
-  ship->tick();
+  //gravity
+  for(auto& object: objects) {
+    object.setForce(vec3d());
+    planet.applyGravity(object);
+  }
+
+  ship.tick();
 }
 
 void webots_physics_step_end() {}
