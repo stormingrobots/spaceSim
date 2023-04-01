@@ -35,16 +35,17 @@ class satellite_radio : public radio {
 
   public:
   satellite_radio(webots::Emitter* emitter, webots::Receiver* receiver);
+  satellite_radio();
 };
 
 class satellite_thruster : public thruster {
   private:
   int id;
   double thrust;
-  satellite* parent;
+  satellite& parent;
 
   public:
-  satellite_thruster(int id, satellite* parent);
+  satellite_thruster(int id, satellite& parent);
   void setThrust(double thrust) override;
   double getThrust() override;
   int getId() override;
@@ -52,13 +53,13 @@ class satellite_thruster : public thruster {
 
 class satellite {
   private:
-  radio* satelliteRadio;
-  std::vector<thruster*> thrusters;
+  satellite_radio satelliteRadio;
+  std::vector<satellite_thruster> thrusters;
 
   public:
-  satellite(webots::Robot* robot);
+  satellite(webots::Robot& robot);
   void tick();
 
-  radio* getRadio();
-  thruster* getThruster(int id);
+  radio& getRadio();
+  thruster& getThruster(int id);
 };

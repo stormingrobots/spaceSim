@@ -17,12 +17,10 @@ void physics_radio::onPing() {
 
 void physics_radio::onThrustSet(thrust_set_body data) {
   log("[Radio] Thruster %d set to %f", data.id, data.thrust);
-  parent->getThruster(data.id)->setThrust(data.thrust);
+  parent.getThruster(data.id).setThrust(data.thrust);
 }
 
-physics_radio::physics_radio(satellite* parent) {
-  this->parent = parent;
-}
+physics_radio::physics_radio(satellite& parent) : parent(parent) {}
 
 physics_object::physics_object() {}
 
@@ -86,11 +84,8 @@ void physics_object::applyGravity(physics_object& object) {
   object.addForce(force);
 }
 
-physics_thruster::physics_thruster(satellite* parent, int id, vec3d offset, vec3d direction) {
-  this->parent = parent;
-  this->id = id;
-  this->offset = offset;
-  this->direction = direction.unit();
+physics_thruster::physics_thruster(satellite& parent, int id, vec3d offset, vec3d direction) :
+  parent(parent), id(id), offset(offset), direction(direction.unit()), thrust(0) {
 }
 
 double physics_thruster::getThrust() { return thrust; }
@@ -105,10 +100,9 @@ void physics_thruster::setThrust(double thrust) {
   this->thrust = thrust;
 }
 
-satellite::satellite() {
-  satelliteRadio = new physics_radio(this);
+satellite::satellite() : satelliteRadio(*this) {
   for (int i = 0; i < 20; i++)
-    thrusters.push_back(new physics_thruster(this, i, { 0, 0, 0 }, { 1, 0, 0 }));
+    thrusters.push_back(physics_thruster(*this, i, { 0, 0, 0 }, { 1, 1, 1 }));
 }
 
 void satellite::init(const std::string& name) {
@@ -116,14 +110,14 @@ void satellite::init(const std::string& name) {
 }
 
 void satellite::tick() {
-  satelliteRadio->poll();
+  satelliteRadio.poll();
 
   //thrust
-  // for (auto thruster : thrusters) {
-  //   addRelForce(thruster->getOffset(), thruster->getForce());
-  // }
+  for (auto& thruster : thrusters) {
+    addRelForce(thruster.getOffset(), thruster.getForce());
+  }
 }
 
-thruster* satellite::getThruster(int id) {
+thruster& satellite::getThruster(int id) {
   return thrusters[id];
 }

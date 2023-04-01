@@ -25,7 +25,7 @@ class satellite;
 class physics_radio : public radio {
 
   private:
-  satellite* parent;
+  satellite& parent;
 
   protected:
   std::string readData() override;
@@ -35,7 +35,7 @@ class physics_radio : public radio {
   void onThrustSet(thrust_set_body data) override;
 
   public:
-  physics_radio(satellite* parent);
+  physics_radio(satellite& parent);
 };
 
 class physics_object {
@@ -72,13 +72,13 @@ class physics_object {
 
 class physics_thruster : public thruster {
   private:
-  satellite* parent;
+  satellite& parent;
   int id;
   vec3d offset, direction;
   double thrust;
 
   public:
-  physics_thruster(satellite* parent, int id, vec3d offset, vec3d direction);
+  physics_thruster(satellite& parent, int id, vec3d offset, vec3d direction);
 
   int getId() override;
   double getThrust() override;
@@ -90,13 +90,13 @@ class physics_thruster : public thruster {
 
 class satellite : public physics_object {
   private:
-  radio* satelliteRadio;
-  std::vector<physics_thruster*> thrusters;
+  physics_radio satelliteRadio;
+  std::vector<physics_thruster> thrusters;
 
   public:
   satellite();
   void init(const std::string& name);
   void tick();
 
-  thruster* getThruster(int id);
+  thruster& getThruster(int id);
 };

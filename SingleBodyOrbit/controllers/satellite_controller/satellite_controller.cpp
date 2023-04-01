@@ -11,15 +11,15 @@
 using namespace webots;
 
 int main(int argc, char** argv) {
-  webots::Robot* robot = new webots::Robot();
+  webots::Robot robot;
   satellite satellite(robot);
-  int timeStep = (int)robot->getBasicTimeStep();
+  int timeStep = robot.getBasicTimeStep();
 
   std::cout << "[Satellite] Starting spaceship with timestep: " << timeStep << std::endl;
 
   int counter = 0;
 
-  while (robot->step(timeStep) != -1) {
+  while (robot.step(timeStep) != -1) {
     satellite.tick();
 
     // counter = (counter + 1) % 20;
@@ -27,6 +27,5 @@ int main(int argc, char** argv) {
     // satellite.getThruster(counter)->setThrust(rand() / (double(RAND_MAX)));
   }
 
-  delete robot;
   return 0;
 }
