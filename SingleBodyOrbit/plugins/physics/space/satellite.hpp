@@ -51,6 +51,7 @@ class physics_object {
   physics_object();
   void init(std::string name);
 
+  std::string& getName();
   dGeomID getGeom();
   dBodyID getBody();
   double getMass();

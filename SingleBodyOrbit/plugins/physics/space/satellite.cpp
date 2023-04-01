@@ -34,6 +34,8 @@ void physics_object::init(std::string name) {
   dBodySetGravityMode(body, 0);
 }
 
+std::string& physics_object::getName() { return name; }
+
 dGeomID physics_object::getGeom() { return geom; }
 
 dBodyID physics_object::getBody() { return body; }
@@ -76,12 +78,12 @@ void physics_object::addRelForce(vec3d offset, vec3d force) {
   dBodyAddRelForceAtRelPos(body, force.x, force.y, force.z, offset.x, offset.y, offset.z);
 }
 
-void physics_object::applyGravity(physics_object& other) {
-  vec3d radius =  getPosition() - other.getPosition();
+void physics_object::applyGravity(physics_object& object) {
+  vec3d radius = getPosition() - object.getPosition();
   double dist = radius.norm() * 1000; // km -> m
-  vec3d force = radius.unit() *
-    (GRAVITATIONAL_CONSTANT * getMass() * other.getMass() / (dist * dist * dist));
-  other.addForce(force);
+  vec3d force = radius *
+    (GRAVITATIONAL_CONSTANT * getMass() * object.getMass() / (dist * dist * dist));
+  object.addForce(force);
 }
 
 physics_thruster::physics_thruster(satellite* parent, int id, vec3d offset, vec3d direction) {

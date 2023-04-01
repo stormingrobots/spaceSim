@@ -9,16 +9,16 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.40741965665824575 0.5845098687463154 0.7016818628884763 4.192315115103936
-  position 6804.677820532259 4.863156788476394 -18.576379067617992
+  orientation 0.4099801445981497 0.49408228021092154 0.7666804950022249 4.403723249081997
+  position 6803.313814709893 18.927956571564728 -36.259722794388566
   follow "Earth"
   followType "None"
 }
 DEF Satellite Robot {
   translation 6800 0 0
-  rotation 0 1 0 0
   children [
     Receiver {
+      channel 1
     }
     Emitter {
     }
@@ -47,8 +47,6 @@ TexturedBackground {
 TexturedBackgroundLight {
 }
 DEF Planet Solid {
-  translation 0 -3.3149952e-30 0
-  rotation 0 1 0 0
   children [
     Shape {
       appearance Appearance {
@@ -70,7 +68,7 @@ DEF Planet Solid {
   }
   physics Physics {
     density -1
-    mass 3e+30
+    mass 5.97219e+24
   }
 }
 Robot {
